@@ -7,7 +7,7 @@
             <div class="overlay"></div>
             <div class="container">
                 <h2>Hot dishes</h2>
-                <h3>Pellentesque habitant morbi</h3>
+                <h3>Pellentesque habitant morb</h3>
             </div>
         </section>
         <section>
