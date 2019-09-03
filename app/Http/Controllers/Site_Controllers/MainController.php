@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Site_Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Mail;
+use App\Mail\newMail;
 
 class MainController extends Controller
 {
@@ -28,6 +30,11 @@ class MainController extends Controller
 		$title="TopNotch - Our Menu";
 		return view('ClientSite/menu',['page_title'=>$title]);	
 
+	}
+
+	public function sendEmail(){
+
+		Mail::send(new newMail());
 	}
 
 

@@ -39,8 +39,8 @@
                         <!--logo-->
                         <div class="logo-holder">
                             <a href="{{url('/')}}">
-                                <img src="{{url('public/Client_Assests/images/logo.png')}}" class="respimg logo-vis" alt="">
-                                <img src="{{url('public/Client_Assests/images/logo2.png')}}" class="respimg logo-notvis" alt="">
+                                <img src="{{url('public/Client_Assests/images/tp1.png')}}" class="respimg logo-vis" alt="">
+                                <img src="{{url('public/Client_Assests/images/tp1.png')}}" class="respimg logo-notvis" alt="">
                             </a>
                         </div>
                         <!--Navigation -->
@@ -57,6 +57,7 @@
                                     </ul> -->
                                 </li>
                                 <li><a href="{{url('Menu')}}">Menu</a></li>
+                                 <li><a href="{{url('Menu')}}">Kitchen Garden</a></li>
                                 <li><a href="{{url('Reservation')}}">Reservation</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="{{url('Contact-Us')}}">Contact</a></li>

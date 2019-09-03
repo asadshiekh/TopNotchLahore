@@ -12,6 +12,14 @@
 */
 
 
+Route::any('email',function(){
+
+	return view('ClientSite/mail');
+});
+
+
+// Manage Client Site
+
 // HOME
 Route::get('/','Site_Controllers\MainController@viewHome');
 
@@ -23,3 +31,16 @@ Route::get('Reservation','Site_Controllers\MainController@viewReservation');
 
 // Contact Us
 Route::get('Contact-Us','Site_Controllers\MainController@viewContactUs');
+
+
+Route::any('send-email','Site_Controllers\MainController@sendEmail');
+
+
+// Manage Admin Site 
+
+Route::get('dashboard','Admin_Controllers\MainController@viewDashboard');
+
+Route::get('admin-login','Admin_Controllers\AdminLogin@viewLogin');
+
+Route::any('do-login','Admin_Controllers\AdminLogin@doLogin');
+

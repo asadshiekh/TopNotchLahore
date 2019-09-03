@@ -8,11 +8,13 @@
             <!-- slideshow -->
             <div class="slides-container">
                 <!-- 1 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/1.jpg')}})"></div>
+                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/18.jpg')}})"></div>
                 <!-- 2 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/28.jpg')}})"></div>
+                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/22.jpg')}})"></div>
+                <!-- 2 -->
+                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/1.jpg')}})"></div>
                 <!-- 3 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/8.jpg')}})"></div>
+<!--                 <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/5.jpg')}})"></div> -->
             </div>
         </div>
         <div class="hero-title-holder">
@@ -22,8 +24,8 @@
                     <div class="half-circle"></div>
                 </div> -->
                 <div class="separator color-separator"></div>
-                <h3>Welcome to Top Notch</h3>
-                <h4>Some Description</h4>
+                <!-- <h3 style="font-size:20px;">FROM FARM TO GARDEN</h3>
+                <h4>Some Description</h4> -->
             </div>
         </div>
         <div class="hero-link">
@@ -78,7 +80,7 @@
             <div class="media-container video-parallax" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
                 <div class="bg mob-bg" style="background-image: url({{url('public/Client_Assests/images/bg/18.jpg')}})"></div>
                 <div class="video-container">
-                    <video autoplay  loop muted  class="bgvid">
+                    <video autoplay loop muted class="bgvid">
                         <source src="{{url('public/Client_Assests/video/1.mp4')}}" type="video/mp4">
                     </video>
                 </div>
