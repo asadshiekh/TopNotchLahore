@@ -8,9 +8,9 @@
             <!-- slideshow -->
             <div class="slides-container">
                 <!-- 1 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/18.jpg')}})"></div>
+                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/1.jpg')}})"></div>
                 <!-- 2 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/22.jpg')}})"></div>
+                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/1.jpg')}})"></div>
                 <!-- 2 -->
                 <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/1.jpg')}})"></div>
                 <!-- 3 -->
