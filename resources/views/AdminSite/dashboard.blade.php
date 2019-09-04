@@ -1,47 +1,49 @@
-  @extends('AdminSite.master')
+  @extends('AdminSite.template.master')
   @section('content')
-
   <!-- page content -->
+
+
   <div class="right_col" role="main">
     <div class="">
       <div class="row top_tiles">
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-cutlery"></i></div>
-            <div class="count">179</div>
-            <h3>Menu Catgeory</h3>
-            <p>Lorem ipsum psdea itgum rixt.</p>
+        <div class="animated flipInY col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="tile-stats" style="padding: 20px;">
+            <div class="icon"><i class="fa fa-group" style="padding-top: 45px;"></i></div>
+            <div class="count" style="font-family: georgia;">179</div>
+            <h3 style="font-family: georgia;font-size: 16px;">Users</h3>
+            
+          </div>  
+        </div>
+        <div class="animated flipInY col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="tile-stats" style="padding: 20px;">
+            <div class="icon"><i class="fa fa-tree" style="padding-top: 45px;"></i></div>
+            <div class="count" style="font-family: georgia;">111</div>
+            <h3 style="font-family: georgia;font-size: 16px;">Reservations</h3>
+            
           </div>
         </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="glyphicon glyphicon-book"></i></div>
-            <div class="count">179</div>
-            <h3>Total Products</h3>
-            <p>Lorem ipsum psdea itgum rixt.</p>
+    
+        <div class="animated flipInY col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="tile-stats" style="padding: 20px;">
+            <div class="icon"><i class="fa fa-smile-o" style="padding-top: 45px;"></i></div>
+            <div class="count" style="font-family: georgia;">179</div>
+            <h3 style="font-family: georgia;font-size: 16px;">Website Viewer</h3>
+            
           </div>
         </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <div class="tile-stats">
-            <div class="icon"><i class="fa fa-pencil-square-o"></i></div>
-            <div class="count">179</div>
-            <h3>Reservations</h3>
-            <p>Lorem ipsum psdea itgum rixt.</p>
+            <div class="icon"><i class="fa fa-smile-o"></i></div>
+            <div class="count" style="font-family: georgia;">179</div>
+            <h3 style="font-family: georgia;font-size: 16px;">New Sign ups</h3>
+            
           </div>
-        </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-thumbs-o-up"></i></div>
-            <div class="count">179</div>
-            <h3>Reviews</h3>
-            <p>Lorem ipsum psdea itgum rixt.</p>
-          </div>
-        </div>
+        </div> -->
       </div>
 
+      </div>
     </div>
-  </div>
-</div>
-<!-- /page content -->
-
-@endsection
+    
+      
+  <!-- /page content -->
+  @endsection

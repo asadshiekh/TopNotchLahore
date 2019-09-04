@@ -1,101 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/bootstrap/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/animate/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/css-hamburgers/hamburgers.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/animsition/css/animsition.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/select2/select2.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/vendor/daterangepicker/daterangepicker.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/css/util.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url('public/Admin_Assests/login_screen1/css/main.css')}}">
-</head>
-<body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-				<form class="login100-form validate-form flex-sb flex-w">
-					
-					<span class="login100-form-title p-b-32">
-						Account Login
-					</span>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="{{csrf_token()}}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-					<span class="txt1 p-b-11">
-						Username
-					</span>
-					<div class="wrap-input100 validate-input m-b-36" data-validate = "Email is required">
-						<span>
-							<i class="email_error"></i>
-						</span>
-						<input class="input100" type="text" id="admin_email" >
-						<span class="focus-input100"></span>
-					</div>
-					
-					<span class="txt1 p-b-11">
-						Password
-					</span>
-					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
-						<span class="btn-show-pass">
-							<i class="fa fa-eye"></i>
-						</span>
-						<input class="input100" type="password" id="admin_password" >
-						<span class="focus-input100"></span>
-					</div>
-					
-					<div class="flex-sb-m w-full p-b-48">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
+    <title>Top Notch | Admin-Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="{{url('public/admin_assets/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{url('public/admin_assets/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{url('public/admin_assets/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="{{url('public/admin_assets/vendors/animate.css/animate.min.css')}}" rel="stylesheet">
 
-						<div>
-							<a href="#" class="txt3">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
+    <!-- Custom Theme Style -->
+    <link href="{{url('public/admin_assets/build/css/custom.min.css')}}" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style type="text/css">
+      .login{
+        background-color: #e6e6e6 !important;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .login_content{
+        padding-top: 0px;
+      }
+      .login_content form{
+        padding: 30px;
+        background-color: white;
+        box-shadow: 1px 1px 15px #e0e0e0;
+      }
+    
+      .login_content form input[type=text], .login_content form input[type=email], .login_content form input[type=password]{
+        padding: 20px;
+        border-radius: 15px;
+      }
+      .login_content form input[type=button]{
+          border-radius: 15px;
+      }
+    </style>
+  </head>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" onclick="dologin();">
-							Login
-						</button>
-					</div>
+  <body class="login">
+    <div>
+      <div class="login_wrapper">
+        <div class="container">
+          <div class="row">
+               <div class="animate form login_form col-sm-12 col-md-8 col-offset-md-2">
+                  <section class="login_content">
+                    <img src="{{url('public/admin_assets/images/tp1.png')}}" height="100px" width="250px">
+                  <form  method="post">
+                    @csrf
+                      <h2>Login Here</h2>
+                      <p id="log_error" style="color: red;"></p>
+                      <div>
+                        <input type="text" class="form-control" placeholder="Username" required=""  id="user-name"/>
+                      </div>
+                      <div>
+                        <input type="password" class="form-control" placeholder="Password" required="" id="password"/>
+                      </div>
+                      <div>
+                        <input type="button" class="btn btn-default submit" value="Log in" onclick="login_admin();" style="margin-left: -53px;" />
+                        <a class="reset_pass" href="{{url('admin-pass-reset')}}">Lost your password?</a>
+                      </div>
 
-				</form>
-			</div>
-		</div>
-	</div>
-	
+                      <div class="clearfix"></div>
 
-	<div id="dropDownSelect1"></div>
-	
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/animsition/js/animsition.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/bootstrap/js/popper.js')}}"></script>
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/select2/select2.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/daterangepicker/moment.min.js')}}"></script>
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/daterangepicker/daterangepicker.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{url('public/Admin_Assests/login_screen1/vendor/countdowntime/countdowntime.js')}}"></script>
-<!--===============================================================================================-->
-	<!-- <script src="{{url('public/Admin_Assests/login_screen1/js/main.js')}}"></script> -->
+                      <div class="separator">
+                        
 
-	<script src="{{url('public/Admin_Assests/custom_js/login.js')}}"></script>
+                        <div class="clearfix"></div>
+                        <br />
 
-</body>
+                        <div>
+                          <!-- <h1><img src="{{url('public/admin_assets/images/tp1.png')}}" height="100px" width="200px"></h1>
+                          <p>© All Rights Reserved. TopNotch!. Privacy and Terms</p> -->
+                        </div>
+                      </div>
+                    </form>
+                    
+                  <p>© All Rights Reserved. TopNotch!. Privacy and Terms</p>
+                  </section>
+
+               </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </body>
 </html>
+

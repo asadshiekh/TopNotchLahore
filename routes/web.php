@@ -38,9 +38,11 @@ Route::any('send-email','Site_Controllers\MainController@sendEmail');
 
 // Manage Admin Site 
 
-Route::get('dashboard','Admin_Controllers\MainController@viewDashboard');
+
 
 Route::get('admin-login','Admin_Controllers\AdminLogin@viewLogin');
 
-Route::any('do-login','Admin_Controllers\AdminLogin@doLogin');
+Route::get('dashboard','Admin_Controllers\MainController@viewDashboard');
+
+// Route::any('do-login','Admin_Controllers\AdminLogin@doLogin');
 
