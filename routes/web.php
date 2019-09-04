@@ -44,5 +44,7 @@ Route::get('admin-login','Admin_Controllers\AdminLogin@viewLogin');
 
 Route::get('dashboard','Admin_Controllers\MainController@viewDashboard');
 
-// Route::any('do-login','Admin_Controllers\AdminLogin@doLogin');
+Route::get('change-logo','Admin_Controllers\MainController@viewlogoPage');
+
+Route::any('do-upload','Admin_Controllers\MainController@doUploadLogo');
 

@@ -39,8 +39,8 @@
                         <!--logo-->
                         <div class="logo-holder">
                             <a href="{{url('/')}}">
-                                <img src="{{url('public/Client_Assests/images/tp1.png')}}" class="respimg logo-vis" alt="">
-                                <img src="{{url('public/Client_Assests/images/tp1.png')}}" class="respimg logo-notvis" alt="">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="">
                             </a>
                         </div>
                         <!--Navigation -->
@@ -104,8 +104,7 @@
                                     <li><a href="#" target="_blank" ><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#" target="_blank" ><i class="fa fa-instagram"></i></a></li>
-                                    <!-- <li><a href="#" target="_blank" ><i class="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#" target="_blank" ><i class="fa fa-tumblr"></i></a></li> -->
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -149,6 +148,7 @@
 <!-- Main end -->
 <!--=============== google map ===============-->
 <script type="text/javascript" src="{{url('public/Client_Assests/js/map.js')}}"></script>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--=============== scripts  ===============-->
 <script type="text/javascript" src="{{url('public/Client_Assests/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/plugins.js')}}"></script>

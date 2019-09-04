@@ -291,7 +291,7 @@
   <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
      <!-- data table button -->
   <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
-
+@include('AdminSite.alerts') 
 </body>
 
 </html>
