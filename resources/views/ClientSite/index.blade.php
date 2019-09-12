@@ -14,7 +14,7 @@
                             <div class="col-12 col-md-6 full-height">
                                 <div class="carousel-item">
                                     <div class="overlay"></div>
-                                    <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/long/1.jpg')}})"></div>
+                                    <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/long/4.jpg')}})"></div>
                                     <div class="carousel-link-holder">
                                         <h3><a href="#sec3" class="custom-scroll-link">Our menu</a></h3>
                                         <h4>Stating confidently</h4>
@@ -25,7 +25,7 @@
                             <div class="col-12 col-md-6 full-height">
                                 <div class="carousel-item">
                                     <div class="overlay"></div>
-                                    <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/long/2.jpg')}})"></div>
+                                    <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/08.jpg')}})"></div>
                                     <div class="carousel-link-holder">
                                         <h3><a href="#sec5" class="custom-scroll-link">Reservation</a></h3>
                                         <h4 style="font-size: 18px;font-family:Georgia;">+92 3334748494 </h4>
