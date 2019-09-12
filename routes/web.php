@@ -48,3 +48,7 @@ Route::get('change-logo','Admin_Controllers\MainController@viewlogoPage');
 
 Route::any('do-upload','Admin_Controllers\MainController@doUploadLogo');
 
+Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');
+
+Route::any('logout','Admin_Controllers\LoginAdmin@adminLogout');
+

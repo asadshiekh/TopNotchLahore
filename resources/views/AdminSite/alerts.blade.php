@@ -16,9 +16,22 @@
 	swal({
 		type: 'error',
 		title: 'Oops...',
-		text: 'Connection Failed!!',
+		text: '{{$message}}',
 		footer: '<a href>Why do I have this issue?</a>'
 	})
-//notyf.confirm('Your changes have been successfully saved!');
+// notyf.confirm('Your changes have been successfully saved!');
+</script>
+@endif
+
+
+@if ($message = Session::get('warning'))
+<script type="text/javascript">
+swal({
+  type: 'success',
+  title: 'Good Bye!',
+  text: '{{$message}}',
+  showConfirmButton: false,
+  timer: 4000
+})
 </script>
 @endif

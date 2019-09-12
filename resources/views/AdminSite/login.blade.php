@@ -23,6 +23,9 @@
     <link href="{{url('public/admin_assets/build/css/custom.min.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style type="text/css">
+
+
+
       .login{
         background-color: #e6e6e6 !important;
         background-size: cover;
@@ -43,13 +46,13 @@
         padding: 20px;
         border-radius: 15px;
       }
-      .login_content form input[type=button]{
+      .login_content form input[type=submit]{
           border-radius: 15px;
       }
     </style>
   </head>
 
-  <body class="login">
+  <body class="login" style="background-color: black">
     <div>
       <div class="login_wrapper">
         <div class="container">
@@ -57,19 +60,19 @@
                <div class="animate form login_form col-sm-12 col-md-8 col-offset-md-2">
                   <section class="login_content">
                     <img src="{{url('public/admin_assets/images/tp1.png')}}" height="100px" width="250px">
-                  <form  method="post">
+                  <form  method="post" action="{{url('do-login')}}">
                     @csrf
                       <h2>Login Here</h2>
                       <p id="log_error" style="color: red;"></p>
                       <div>
-                        <input type="text" class="form-control" placeholder="Username" required=""  id="user-name"/>
+                        <input type="text" class="form-control" placeholder="Enter Email" required="" name="admin_email"  id="user-name"/>
                       </div>
                       <div>
-                        <input type="password" class="form-control" placeholder="Password" required="" id="password"/>
+                        <input type="password" class="form-control" placeholder="Password" name="admin_password" required="" id="password"/>
                       </div>
                       <div>
-                        <input type="button" class="btn btn-default submit" value="Log in" onclick="login_admin();" style="margin-left: -53px;" />
-                        <a class="reset_pass" href="{{url('admin-pass-reset')}}">Lost your password?</a>
+                        <input type="submit" class="btn btn-default submit" value="Log in"  style="margin-left: 1px;" />
+                        <a class="reset_pass" href="#">Lost your password?</a>
                       </div>
 
                       <div class="clearfix"></div>
@@ -96,6 +99,7 @@
       
       </div>
     </div>
+    @include('AdminSite.alerts') 
   </body>
 </html>
 

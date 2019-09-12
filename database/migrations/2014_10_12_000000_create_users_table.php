@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('admin_account', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
@@ -21,6 +21,17 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+
+         $current_date = date("Y.m.d h:i:s");
+        DB::table('admin_account')->insert(
+        array(
+            'name' => 'admin',
+            'email' => 'topnotchlahore@gmail.com',
+            'password' => 'admin',
+            'created_at' => $current_date,
+        )
+        );
     }
 
     /**

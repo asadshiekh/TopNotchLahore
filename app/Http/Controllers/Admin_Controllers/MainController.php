@@ -33,8 +33,9 @@ class MainController extends Controller
 	     		'updated_at'=>$current_date
 	     	);
 	     	if(DB::table('website_logo')->where(['id'=>'1'])->update($logo_up)){
-	     		return redirect('change-logo')->with(['success' => 'Logo Updated Successfully!','errors']);
+	     		return redirect('change-logo')->with(['success' => 'Logo Updated Successfully!']);
 	     }
+
 	     }
 	    	
 	    }

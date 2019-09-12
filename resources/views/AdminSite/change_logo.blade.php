@@ -42,11 +42,7 @@
             <!-- Start Content-->
             <form enctype="multipart/form-data" method="post" action="{{url('do-upload')}}">
            @csrf
-                @if (session()->has('success'))
-                 <script type="text/javascript">
-                  swal("Deleted!", "Your cities has been deleted.", "success");
-                </script>
-                @endif
+
             <div class="form-group col-sm-12 col-md-6 col-md-offset-2">
               <label>Upload Image:</label>
               <div class="input-group">
@@ -84,30 +80,8 @@
 </div>
 </div>
 </div>
-<!--model-->
-<div id="model_view_message"></div>
-<div id="model_reply_message"></div>
-<div id="view_user_model"></div>
-<div  id="exampleModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Update User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div id="edit_text">
-      </div>
 
-    </div>
-  </div>
-</div>
-<!--/model-->
 
-<script>
-
-</script>
 @endsection
 
 

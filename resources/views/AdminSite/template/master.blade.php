@@ -88,20 +88,19 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu" style="font-family: georgia regular;">
-                <li><a href=""><i class="fa fa-home"></i> Dashboard </a>
+                <li><a href="{{url('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a>
                    <!--  <ul class="nav child_menu">
                     <li><a href="{{url('admin-dashboard')}}">Dashboard</a></li>                      
                   </ul> -->
                 </li>
 
-                <!-- n -->
+
                 <li><a><i class="fa fa-circle-o"></i> CMS <span class="fa fa-chevron-down"></span></a>
 
                   <ul class="nav child_menu">
-                    <li><a href="{{url('view-organization')}}">Change Logo</a></li>
+                    <li><a href="{{url('change-logo')}}">Change Logo</a></li>
                      
                   
-
                   </ul>
                 </li>
                 <!-- n -->
@@ -120,7 +119,7 @@
             <div class="menu_section">
               <h3>Account</h3>
               <ul class="nav side-menu">
-                <li><a href=""><i class="fa fa-bug"></i> Sign Out </a>
+                <li><a href="{{url('logout')}}"><i class="fa fa-bug"></i> Sign Out </a>
 
                 </li>
 
@@ -155,7 +154,7 @@
                     </a>
                   </li>
                   <li><a href="javascript:;">Help</a></li> -->
-                  <li><a href="{{url('log-out')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="{{url('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 
