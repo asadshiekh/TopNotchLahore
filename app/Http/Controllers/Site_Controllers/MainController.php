@@ -16,6 +16,12 @@ class MainController extends Controller
 		$logo=DB::table('website_logo')->select('logo')->where(['id'=>'1'])->first();
 		return view('ClientSite/home',['page_title'=>$title,'web_logo'=>$logo]);
 	}
+	
+	public function viewIndex(){
+    	$title="TopNotch - Index";
+		$logo=DB::table('website_logo')->select('logo')->where(['id'=>'1'])->first();
+		return view('ClientSite/index',['page_title'=>$title,'web_logo'=>$logo]);
+    }
 
 	public function viewReservation(){
 		$title="TopNotch - Reservation";

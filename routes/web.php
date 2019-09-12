@@ -23,6 +23,9 @@ Route::any('email',function(){
 // HOME
 Route::get('/','Site_Controllers\MainController@viewHome');
 
+// INDEX
+Route::get('index','Site_Controllers\MainController@viewIndex');
+
 //MENU
 Route::get('Menu','Site_Controllers\MainController@viewMenu');
 
@@ -47,8 +50,4 @@ Route::get('dashboard','Admin_Controllers\MainController@viewDashboard');
 Route::get('change-logo','Admin_Controllers\MainController@viewlogoPage');
 
 Route::any('do-upload','Admin_Controllers\MainController@doUploadLogo');
-
-Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');
-
-Route::any('logout','Admin_Controllers\LoginAdmin@adminLogout');
 
