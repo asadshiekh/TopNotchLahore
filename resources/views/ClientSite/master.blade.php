@@ -73,7 +73,7 @@
         
         <!--content end-->
         <!--=============== footer ===============-->
-        <footer>
+        <footer id="my-foot">
             <div class="footer-inner">
                 <div class="container">
                     <div class="row">
