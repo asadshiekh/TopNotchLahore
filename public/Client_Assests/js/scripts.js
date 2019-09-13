@@ -110,7 +110,7 @@ function initLambert() {
     d.owlCarousel({
         navigation: false,
         slideSpeed: 500,
-        items: 4,
+        items: 3,
         pagination: false,
         autoHeight: true
     });

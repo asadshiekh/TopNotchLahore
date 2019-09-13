@@ -10,6 +10,7 @@
         <meta name="robots" content="index, follow"/>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
+
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/reset.css')}}">
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/plugins.css')}}">
@@ -146,6 +147,8 @@
     <!-- wrapper end -->
 </div>
 <!-- Main end -->
+<!-- bootstrap -->
+
 <!--=============== google map ===============-->
 <script type="text/javascript" src="{{url('public/Client_Assests/js/map.js')}}"></script>
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
