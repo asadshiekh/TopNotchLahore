@@ -17,7 +17,7 @@
                                     <div class="bg" style="background-image: url({{url('public/Client_Assests/images/bg/long/5.jpg')}})"></div>
                                     <div class="carousel-link-holder">
                                         <h3><a href="{{url('Menu')}}" class="custom-scroll-link">Our menu</a></h3>
-                                        <h4>Stating confidently</h4>
+                                        <h4>We Serve Great</h4>
                                     </div>
                                 </div>
                             </div>
@@ -39,8 +39,8 @@
                                     <div class="overlay"></div>
                                     <div class="bg" style="background-image: url({{url('public/Client_Assests/images/gallery/6.jpg')}})"></div>
                                     <div class="carousel-link-holder">
-                                        <h3><a href="#sec4" class="custom-scroll-link">About Us</a></h3>
-                                        <h4> Mauris placerat</h4>
+                                        <h3><a href="#my-foot" class="custom-scroll-link">About Us</a></h3>
+                                        <h4>Take it confidently</h4>
                                     </div>
                                 </div>
                             </div>
@@ -81,6 +81,13 @@
 			.customNavigation{
 				display: none;
 			}
+     	}
+     	header.sticky nav a, header.sticky .subnav a, header.flat-header .nav-social li a, header.flat-header .subnav a{
+     		color: #C59D5F !important;
+     	}
+     	.header-inner:before {
+     		background:#191919 !important; 
+     		color: #C59D5F !important;
      	}
      </style>
                 
