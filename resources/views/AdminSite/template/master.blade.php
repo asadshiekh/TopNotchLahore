@@ -99,6 +99,7 @@
 
                   <ul class="nav child_menu">
                     <li><a href="{{url('change-logo')}}">Change Logo</a></li>
+                    <li><a href="{{url('add-menu-category')}}">Menu Categories</a></li>
                      
                   
                   </ul>

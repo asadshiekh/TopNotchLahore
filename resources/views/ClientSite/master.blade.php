@@ -16,6 +16,7 @@
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/plugins.css')}}">
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/style.css')}}">
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/color.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/main.css')}}">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="{{url('public/Client_Assests/images/favicon.ico')}}">
     </head>

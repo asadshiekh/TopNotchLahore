@@ -51,6 +51,19 @@ Route::get('change-logo','Admin_Controllers\MainController@viewlogoPage');
 
 Route::any('do-upload','Admin_Controllers\MainController@doUploadLogo');
 
+// categories routes
+//add new cat
+
+Route::any('add-menu-category','Admin_Controllers\MainController@viewCategoryPage');
+
+Route::any('do-upload-cat','Admin_Controllers\MainController@doUploadCategory');
+
+//update cat
+
+Route::any('view-update-category','Admin_Controllers\MainController@viewUpdateCatModal');
+
+//categories routes end
+
 Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');
 
 Route::any('logout','Admin_Controllers\LoginAdmin@adminLogout');
