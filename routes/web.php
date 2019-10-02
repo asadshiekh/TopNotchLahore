@@ -61,7 +61,14 @@ Route::any('do-upload-cat','Admin_Controllers\MainController@doUploadCategory');
 //update cat
 
 Route::any('view-update-category','Admin_Controllers\MainController@viewUpdateCatModal');
+Route::any('view-update-category-img','Admin_Controllers\MainController@viewUpdateCatModal1');
 
+Route::any('do-update-category','Admin_Controllers\MainController@doUpdateCatModal');
+
+Route::any('do-update-category-img','Admin_Controllers\MainController@doUpdateCatModal1');
+
+// delete cat
+Route::any('delete_category/{id}','Admin_Controllers\MainController@doDelCategory');
 //categories routes end
 
 Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');

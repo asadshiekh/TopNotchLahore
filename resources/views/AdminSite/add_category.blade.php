@@ -78,8 +78,8 @@
 
                   <thead>
                     <tr id="city-tr">
-                     <th>Category Name</th>  
-                     <th>Category Image</th>                
+                     <th colspan="2">Category Name</th>  
+                     <th colspan="2">Category Image</th>                
                      <th>Action</th>
                    </tr>
                  </thead>
@@ -88,9 +88,14 @@
                  <tbody>
                   @foreach($cat as $cat)
                 <tr id=""> 
-                  <td><?php echo $cat_name=str_replace("_"," ",$cat->cat_name);?></td>
-                  <td><img src="uploads/Category/{{$cat->cat_image}}"  width="20%"></td>
-                  <td><i class="fa fa-pencil" onclick="show_model_form('{{$cat->cat_id}}');"></i>&nbsp; |&nbsp; <i class="fa fa-trash"></i></td>
+                  <td><?php echo $cat_name=str_replace("_"," ",$cat->cat_name);?><td><i class="fa fa-pencil" onclick="show_model_form('{{$cat->cat_id}}');"></i></td></td>
+                  <td class="image-td"><img src="uploads/Category/{{$cat->cat_image}}"  width="20%"><td><a><i class="fa fa-pencil" onclick="show_model_form1('{{$cat->cat_id}}');"></i></a></td></td>
+                  <td>
+                    <form method="post" action="{{url('delete_category')}}/{{$cat->cat_id}}" id="my-form{{$cat->cat_id}}">
+                    @csrf
+                    <a type="button" onclick="confSubmit('{{$cat->cat_id}}');"><i class="fa fa-trash"></i></a>
+                  </form>
+                </td>
                 </tr>
                 @endforeach
                </tbody>
@@ -107,12 +112,63 @@
 </div>
 
 <!-- modal window start here -->
+<div id="myModalCat1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+<form enctype="multipart/form-data" method="post" action="do-update-category-img">
+  @csrf
+     <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Update Category ?</h4>
+        <div class="col-sm-6 col-md-offset-4" id="loading-spin">
+          <i id="i" style="font-size:100px"></i>
+        </div>
+        <div class="col-sm-6 col-md-offset-4" id="loading-true">
+          <i id="tru" style="font-size:100px; color: #38b75e"></i>
+        </div>
+      </div>
+      <div class="modal-body" id="modal-content">
+        <div class="col-8 offset-2">
+        <label style="display: inline;">ReChoose Category Image:</label><p id="name-error" style="display: inline;"></p>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <i class="fa fa-yelp"></i>
+          </div>
+          <input type="file" class="form-control" name="up_cat" id="up_cat" placeholder="Upload-Image">
+
+        </div>
+        <div id="current_pic">
+       
+        </div>
+        </div>
+        <!-- <i class="fa fa-spinner fa-spin" style="font-size:24px"></i> --> 
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-default">Change</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+</div>
+<!-- //new -->
 <div id="update_cat_modal">
   
 </div>
 <!-- modal win dow ends here -->
-
+<style type="text/css">
+.image-td{
+  width: 35% !important;
+}
+</style>
 <script type="text/javascript">
+
+
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   function show_model_form(x) {
     var x=x;
@@ -125,6 +181,32 @@
      }
     });
   }
+  function show_model_form1(x) {
+    var x=x;
+    // alert(x);
+    $.post("{{url('view-update-category-img')}}",{_token:CSRF_TOKEN,x:x},function(data){
+     // alert(data);
+     if(data){
+      $("#current_pic").html(data);
+      $("#myModalCat1").modal('show');
+     }
+    });
+  }
+  // function update_cat_content(id){
+  // $.post("{{url('do-update-category')}}",{_token:CSRF_TOKEN,id:id},function(data){
+  //    // alert(data);
+  //    if(data){
+  //     // $("#myModalCat").modal('hide');
+  //     alert(data);
+  //    }
+  //   });
+  // }
+  function confSubmit(x) {
+  
+  if (confirm("Are you sure you want to submit the form?")) {
+  $('#my-form'+x).submit();
+  }
+}
 </script>
 @endsection
 

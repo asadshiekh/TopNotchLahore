@@ -21,7 +21,7 @@
         <link rel="shortcut icon" href="{{url('public/Client_Assests/images/favicon.ico')}}">
     </head>
     <body>
-        <div class="loader"><img src="{{url('public/Client_Assests/images/loader.png')}}" alt=""></div>
+        <div class="loader"><img src="{{url('public/Client_Assests/images/horseloader.png')}}" style="height: 41px;width:54px;" alt=""></div>
         <!--================= main start ================-->
         <div id="main">
             <!--=============== header ===============-->
