@@ -175,4 +175,52 @@ class MainController extends Controller
     }
 
 
+    //menu funtions
+
+    public function viewMenuPage(){
+        $title="TopNotch - Logo";
+        $data=DB::table('add_menu_item')->get();
+        return view('AdminSite/add_menu',['page_title'=>$title,'items'=>$data]);
+    }
+
+    public function doAddMenuItem(Request $request){
+        echo $name= $request->post('item_name');
+        echo $price= $request->post('item_price');
+        echo $des=$request->post('item_des');
+        echo $type=$request->post('item_type');
+        echo $discount=$request->post('item_discount');
+
+        if($discount == ""){
+           $discount="null";
+        }
+        $item = array(
+            'item_name' => $name,
+            'item_price' => $price,
+            'item_des' => $des,
+            'item_type' => $type,
+            'item_discount' => $discount,
+             );
+        if(DB::table('add_menu_item')->insert($item)){
+         return redirect('view-menu-page')->with(['success' => 'Item Successfully Added in Your Menu']);
+        }
+
+
+    }
+
+    public function doDelMenuItem($id){
+     if(DB::table('add_menu_item')->where(['item_id'=>$id])->delete()){
+         return redirect('view-menu-page')->with(['success' => 'Item Successfully Deleted From Your Menu']);
+        }
+    }
+
+    public function doOpenUpdateModel(Request $request){
+        $id=$request->post('id');
+        $data=DB::table('add_menu_item')->where(['item_id'=>$id])->first();
+         // print_r($data);
+        echo 'y';
+
+
+    }
+
+
 }

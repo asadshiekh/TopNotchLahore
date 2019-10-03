@@ -71,6 +71,17 @@ Route::any('do-update-category-img','Admin_Controllers\MainController@doUpdateCa
 Route::any('delete_category/{id}','Admin_Controllers\MainController@doDelCategory');
 //categories routes end
 
+//menu routes start
+Route::any('view-menu-page','Admin_Controllers\MainController@viewMenuPage');
+
+Route::any('do-add-in-menu','Admin_Controllers\MainController@doAddMenuItem');
+
+Route::any('delete-item/{id}','Admin_Controllers\MainController@doDelMenuItem');
+
+Route::any('open_model_window','Admin_Controllers\MainController@doOpenUpdateModel');
+
+//menu routes end
+
 Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');
 
 Route::any('logout','Admin_Controllers\LoginAdmin@adminLogout');

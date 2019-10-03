@@ -624,7 +624,8 @@ header.sticky nav li a:before  , header.sticky nav li a:after , header.flat-head
 	background:#000;
 }
 header.sticky .nav-button span  , header.flat-header .nav-button span{
-	background:#000;
+	/*background:#000;*/
+	 background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%);
 }
 header.sticky nav li ul {
 	background:rgba(255,255,255,1);

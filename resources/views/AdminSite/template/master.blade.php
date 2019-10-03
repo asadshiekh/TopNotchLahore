@@ -11,22 +11,17 @@
   <title> {{ $page_title }} </title>
   
   
-  <link rel="stylesheet" type="text/css" href="{{url('public/admin_assets/loading/loading-bar.css')}}"/>
-  <script type="text/javascript" src="{{url('public/admin_assets/loading/loading-bar.js')}}"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ 
   <!-- Input Tags -->
-  <link href="{{url('public/admin_assets/input_tags/css/bootstrap-tagsinput.css')}}" rel="stylesheet">
   <!-- image cropper -->
-  <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
-  <script src="http://demo.itsolutionstuff.com/plugin/croppie.js"></script>
-  <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
-  <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/croppie.css">
+  
+ 
    <!-- Date Dropper -->
-  <link href="{{url('public/admin_assets/date_dropper/css/datedropper.css')}}" rel="stylesheet">
-  <link href="{{url('public/admin_assets/date_dropper/css/my-style.css')}}" rel="stylesheet">
+  
+
   <!-- Bootstrap -->
   <link href="{{url('public/admin_assets/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Font Awesome -->
@@ -39,21 +34,8 @@
   <!-- Custom Theme Style -->
   <link href="{{url('public/admin_assets/build/css/custom.min.css')}}" rel="stylesheet">
   <!-- Ck Editors Basic -->
-  <script src="//cdn.ckeditor.com/4.11.1/basic/ckeditor.js"></script>
-  <!-- JQuery Data Tables -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <!-- javascript Css notify -->
-  <link rel="stylesheet" href="{{url('public/admin_assets/notify/css/notyf.min.css')}}">
-  <!-- Pro Tip javaScript -->
-  <link rel="stylesheet" href="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.css">
-  <!-- bootstrap toggle -->
-  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <!-- data table Responsive -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
-    <!-- data tables-->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <!-- data table Button -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+  
   
 </head>
 
@@ -100,7 +82,7 @@
                   <ul class="nav child_menu">
                     <li><a href="{{url('change-logo')}}">Change Logo</a></li>
                     <li><a href="{{url('add-menu-category')}}">Menu Categories</a></li>
-                     
+                     <li><a href="{{url('view-menu-page')}}">Manage Menu</a></li>
                   
                   </ul>
                 </li>
@@ -209,6 +191,8 @@
   <!--jquery table-->
 
   <!-- jQuery -->
+  <script src="https://kit.fontawesome.com/2208ead998.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="{{url('public/admin_assets/vendors/jquery/dist/jquery.min.js')}}"></script>
   <!-- Bootstrap -->
   <script src="{{url('public/admin_assets/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
@@ -237,9 +221,7 @@
   <script src="{{url('public/admin_assets/vendors/moment/min/moment.min.js')}}"></script>
   <script src="{{url('public/admin_assets/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script> 
   <!-- Custom Theme Scripts -->
-  <script type="text/javascript" src="{{url('public/admin_assets/customJS/organizationJS.js')}}"></script>
-  <script type="text/javascript" src="{{url('public/admin_assets/customJS/usersJS.js')}}"></script>
-  <script type="text/javascript" src="{{url('public/admin_assets/customJS/mainJS.js')}}"></script>
+  
   <script src="{{url('public/admin_assets/vendors/jquery.tagsinput/src/jquery.tagsinput.js')}}"></script>
   <script src="{{url('public/admin_assets/build/js/custom.min.js')}}"></script>
 
@@ -259,38 +241,6 @@
   <script src="{{url('public/admin_assets/vendors/jszip/dist/jszip.min.js')}}"></script>
   
   
-  <!-- Jquery data Tables .Js -->
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <!-- jQuery -->
-  <script src="{{url('public/admin_assets/input_tags/js/bootstrap-tagsinput.js')}}"></script>
-  <script src="{{url('public/admin_assets/date_dropper/js/datedropper.js')}}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <!-- Notify Javascript -->
-  <script src="{{url('public/admin_assets/notify/js/notyf.min.js')}}"></script>
-  <!-- Pro Tip javaScript -->
-  <script src="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.js"></script>
-  <!-- bootstrap toogle -->
-  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-  <!-- data table Responsive -->
-  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-
-   <!-- data table button -->
-  <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-     <!-- data table button -->
-  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-
-     <!-- data table button -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-  
-     <!-- data table button -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-
-     <!-- data table button -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-
-  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-     <!-- data table button -->
-  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
 @include('AdminSite.alerts') 
 </body>
 
