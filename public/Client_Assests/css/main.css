@@ -12,12 +12,20 @@
     margin-bottom: 10px !important;
   }
  
- 	header nav a, header .subnav a, header .nav-social li a, header .subnav a{
+ 	header nav a, header .subnav a, header .subnav a{
  		 background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%);
  		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		    font-weight: bolder;
  	}
+
+  header .nav-social li a i{
+
+         background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
  	.footer-contacts li a {
  		background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%);
  		-webkit-background-clip: text;
@@ -48,6 +56,11 @@
       /*animation:.8s mynon;*/
       animation-play-state: paused;
  	}
+
+  .nav-button span {
+   background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%) !important;
+}
+
  	@-webkit-keyframes slideInDown {
     from {
         -webkit-transform: translate3d(0, -55%, 0);
