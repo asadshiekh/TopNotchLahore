@@ -84,9 +84,9 @@
                     </div> -->
                     <!--footer contacts links -->
                     <ul class="footer-contacts">
-                        <li><a href="#" class="gold">0324 999 8787</a></li>
-                        <li><a href="#" class="gold">TopNotch, Restaurant Lahore Polo & Country Club, Eden City (Ex) Air Avenue DHA  Phase 8 Lahore</a></li>
-                        <li><a href="#" class="gold">info@TopNotchLahore.com</a></li>
+                        <li><a href="#" class="gold">{{$about->org_number}}</a></li>
+                        <li><a href="#" class="gold">{{$about->org_address}}</a></li>
+                        <li><a href="#" class="gold">{{$about->org_email}}</a></li>
                     </ul>
                 </div>
             </div>

@@ -42,6 +42,20 @@
             <!-- Start Content-->
             <form enctype="multipart/form-data" method="post" action="{{url('do-add-in-menu')}}">
              @csrf
+             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
+              <label>Item Category:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fab fa-yelp"></i>
+                </div>
+                <select name="selected_cat" id="selected_cat" class="form-control">
+                  <option selected="selected" hidden>Select Category</option>
+                  @foreach($cats as $cats)
+                  <option class="form-control" value="{{$cats->cat_name}}"><?php echo str_replace("_"," ",$cats->cat_name);?></option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <label>Item Name:</label>
               <div class="input-group">
@@ -52,6 +66,7 @@
                 <input type="text" class="form-control" name="item_name" id="item_name" placeholder="Enter Name">
               </div>
             </div>
+            
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <label>Item Price:</label>
               <div class="input-group">
@@ -104,6 +119,7 @@
 
                   <thead >
                     <tr>
+                     <th style="text-align: center;">Item Category</th> 
                      <th style="text-align: center;">Item Name</th>  
                      <th style="text-align: center;">Item Price</th>                
                      <th style="text-align: center;">Description</th>
@@ -115,6 +131,7 @@
                  <tbody>
                 @foreach($items as $items)
                  <tr>
+                   <td><?php echo str_replace("_"," ",$items->item_category);?></td>
                    <td>{{$items->item_name}}</td>
                    <td>{{$items->item_price}}</td>
                    <td>{{$items->item_des}}</td>
@@ -125,8 +142,9 @@
                    <td>
                     <form id="del-item-form{{$items->item_id}}" method="post" action="{{url('delete-item')}}/{{$items->item_id}}">
                       @csrf
-                    <a onclick="open_modal('{{$items->item_id}}','{{$items->item_name}}','{{$items->item_price}}','{{$items->item_des}}','{{$items->item_type}}','{{$items->item_discount}}');"><i class="fa fa-pencil"></i></a>&nbsp; | &nbsp; <a type="submit" onclick="confirmSubmit('{{$items->item_id}}');"><i class="fa fa-trash"></i></a></td>
+                    <a onclick="open_modal('{{$items->item_id}}','{{$items->item_type}}','{{$items->item_discount}}');"><i class="fa fa-pencil"></i></a>&nbsp; | &nbsp; <a type="submit" onclick="confirmSubmit('{{$items->item_id}}');"><i class="fa fa-trash"></i></a>
                     </form>
+                    </td>
                  </tr>
                  @endforeach
                </tbody>
@@ -147,8 +165,6 @@
   <div class="modal-dialog">
 
     <!-- Modal content-->
-<form enctype="multipart/form-data" method="post" action="">
-  @csrf
      <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -159,63 +175,32 @@
        
             </div>
             <div class="modal-body" id="modal-content">
-              <form method="post" action="">
-                @csrf
+            <form id="form-edit-item" action="{{url('update-item-menu')}}" method="post">
+              @csrf
               <div class="row" id="modal-data">
-                
+
+                <div id="app_data"></div>
                 <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
-              <label>Item Name:</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fas fa-i-cursor"></i>
+                  <label>Item Type:</label><br/>
 
+                    <label>Simple:</label>
+                    <input type="radio" value="simple" id="item_type_simple" name="up_item_type" onchange="show_per(this.value);">
+
+                    <label style="margin-left: 20px;">Chef Selection:</label>
+                    <input type="radio" value="chef"  id="item_type_chef" name="up_item_type" onchange="show_per(this.value);">
+
+                    <label style="margin-left: 20px;">Sale:</label>
+                     <input type="radio" value="sale" id="item_type_sale" name="up_item_type" onchange="show_per(this.value);">
+
+                    <div class="percent-div" style="display: inline-block;">
+                    <input type="text" name="up_item_discount" id="up_item_discount" placeholder="Enter Discount e.g:(20)">&nbsp;&nbsp;&nbsp;<span style="font-size:16px;font-weight: bold;">%</span>
+                  </div>
                 </div>
-                <input type="text" class="form-control" name="up_item_name" id="up_item_name" placeholder="Enter Name">
-              </div>
-            </div>
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
-              <label>Item Price:</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fas fa-dollar-sign"></i>
-
-                </div>
-                <input type="text" class="form-control" name="up_item_price" id="up_item_price" placeholder="Enter Price">
-              </div>
-            </div>
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
-              <label>Item Description:</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fas fa-info"></i>
-
-                </div>
-                <textarea type="text" class="form-control" name="up_item_des" id="up_item_des" placeholder="Write Some Description"></textarea>
-              </div>
-            </div>
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
-              <label>Item Type:</label><br/>
-
-                <label>Simple:</label>
-                <input type="radio" value="simple" id="up_item_type" name="up_item_type" onchange="show_per(this.value);" checked>
-
-                <label style="margin-left: 20px;">Chef Selection:</label>
-                <input type="radio" value="chef"  id="up_item_type" name="up_item_type" onchange="show_per(this.value);">
-
-                <label style="margin-left: 20px;">Sale:</label>
-                 <input type="radio" value="sale" id="up_item_type" name="up_item_type" onchange="show_per(this.value);">
-
-                <div class="percent-div" style="display: inline-block;">
-                <input type="text" name="up_item_discount" id="up_item_discount" placeholder="Enter Discount e.g:(20)">&nbsp;&nbsp;&nbsp;<span style="font-size:16px;font-weight: bold;">%</span>
-              </div>
-            </div>
            
               </div>
-        
-      
-            <div class="modal-footer">
+              <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-default">Change</button>
+              <a type="submit" onclick="editConfirm();" class="btn btn-default">Update Item</a>
             </div>
           </form>
           </div>
@@ -254,16 +239,37 @@
   $('#del-item-form'+x).submit();
   }
   }
-
-  function open_modal(id,name,price,des,type,discount){
-    alert(id+" "+name+" "+price+" "+des+" "+type+" "+discount);
+   
+   function editConfirm(){
+   
+   if (confirm("Are you sure you want to submit the form?")) {
+    $('#form-edit-item').submit();
+    }
+   }
+  function open_modal(id,type,discount){
+    // alert(id+" "+type+" "+discount);
    $.post("{{url('open_model_window')}}",{_token:CSRF_TOKEN,id:id},function(data){
       if(data){
-        // $("#modal-data").html(data);
+        $("#app_data").html(data);
         $("#myModalMenu").modal('show');
-        $("#up_item_name").val(function() {
-            return "yes" + '1';
+       if(type == "simple"){
+        $("#item_type_simple"). prop("checked", true);
+        $(".percent-div").hide();
+       }
+       else if(type == "chef"){
+        $("#item_type_chef"). prop("checked", true);
+        $(".percent-div").hide();
+       }
+       if(type == "sale"){
+        $("#item_type_sale"). prop("checked", true);
+        $(".percent-div").show();
+        $("#up_item_discount").val(function() {
+            return discount;
         });
+       }
+        // $("#up_item_type").val(function() {
+        //     // return name;
+        // });
       }
    });
   }

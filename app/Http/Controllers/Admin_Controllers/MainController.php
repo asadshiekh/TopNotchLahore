@@ -180,25 +180,30 @@ class MainController extends Controller
     public function viewMenuPage(){
         $title="TopNotch - Logo";
         $data=DB::table('add_menu_item')->get();
-        return view('AdminSite/add_menu',['page_title'=>$title,'items'=>$data]);
+        $cats=DB::table('menu_category')->get();
+        return view('AdminSite/add_menu',['page_title'=>$title,'items'=>$data,'cats'=>$cats]);
     }
 
     public function doAddMenuItem(Request $request){
-        echo $name= $request->post('item_name');
-        echo $price= $request->post('item_price');
-        echo $des=$request->post('item_des');
-        echo $type=$request->post('item_type');
-        echo $discount=$request->post('item_discount');
+        $current_date = date("Y.m.d h:i:s");
+        $cat= $request->post('selected_cat');
+        $name= $request->post('item_name');
+        $price= $request->post('item_price');
+        $des=$request->post('item_des');
+        $type=$request->post('item_type');
+        $discount=$request->post('item_discount');
 
         if($discount == ""){
            $discount="null";
         }
         $item = array(
+            'item_category' => $cat,
             'item_name' => $name,
             'item_price' => $price,
             'item_des' => $des,
             'item_type' => $type,
             'item_discount' => $discount,
+            'created_at'=>$current_date
              );
         if(DB::table('add_menu_item')->insert($item)){
          return redirect('view-menu-page')->with(['success' => 'Item Successfully Added in Your Menu']);
@@ -216,11 +221,110 @@ class MainController extends Controller
     public function doOpenUpdateModel(Request $request){
         $id=$request->post('id');
         $data=DB::table('add_menu_item')->where(['item_id'=>$id])->first();
+        $cats=DB::table('menu_category')->get();
+
          // print_r($data);
-        echo 'y';
+        echo '<div class="form-group col-sm-12 col-md-6 col-md-offset-3">
+              <label>Item Category:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fab fa-yelp"></i>
+                </div>
+                <select name="up_selected_cat" id="up_selected_cat" class="form-control">
+                  <option id="my-option" selected="selected" hidden value="'.$data->item_category.'">'.$data->item_category.'</option>';
+                  foreach($cats as $cats){
+                   $cat_name=str_replace("_"," ",$cats->cat_name);
+                  echo '<option class="form-control" value="'.$cats->cat_name.'">'.$cat_name.'</option>';
+                  }
+                echo '</select>
+              </div>
+            </div>
+            <input type="hidden" name="item_id" value="'.$data->item_id.'"/>
+
+                <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
+              <label>Item Name:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fas fa-i-cursor"></i>
+
+                </div>
+                <input type="text" class="form-control" name="up_item_name" id="up_item_name" placeholder="Enter Name" value="'.$data->item_name.'">
+              </div>
+            </div>
+            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
+              <label>Item Price:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fas fa-dollar-sign"></i>
+
+                </div>
+                <input type="text" class="form-control" name="up_item_price" id="up_item_price" placeholder="Enter Price" value="'.$data->item_price.'">
+              </div>
+            </div>
+            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
+              <label>Item Description:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fas fa-info"></i>
+
+                </div>
+                <textarea type="text" class="form-control" name="up_item_des" id="up_item_des" placeholder="Write Some Description" value="'.$data->item_des.'">'.$data->item_des.'</textarea>
+              </div>
+            </div>';
 
 
     }
 
+    public function doUpdateMenuItem(Request $request){
+        $current_date = date("Y.m.d h:i:s");
+        $id= $request->post('item_id');
+        $cat= $request->post('up_selected_cat');
+        $name= $request->post('up_item_name');
+        $price= $request->post('up_item_price');
+        $des=$request->post('up_item_des');
+        $type=$request->post('up_item_type');
+        $discount=$request->post('up_item_discount');
+
+        if($type == "simple"){
+           $discount="null";
+        }else if($type == "chef"){
+           $discount="null";
+        }
+         $up_item = array(
+            'item_category' => $cat,
+            'item_name' => $name,
+            'item_price' => $price,
+            'item_des' => $des,
+            'item_type' => $type,
+            'item_discount' => $discount,
+            'updated_at'=>$current_date
+             );
+        if(DB::table('add_menu_item')->where(['item_id'=>$id])->update($up_item)){
+         return redirect('view-menu-page')->with(['success' => 'Item Successfully Updated From Your Menu']);
+        }
+    }
+
+
+    public function viewAboutUsPage(){
+        $title="TopNotch - About";
+        $about=DB::table('about_us_details')->first();
+        return view('AdminSite/manage_about_us',['page_title'=>$title,'about'=>$about]);
+    }
+
+    public function editAboutUsDetail(Request $request){
+      $current_date = date("Y.m.d h:i:s");
+      $number=$request->post('org_no');
+      $email=$request->post('org_email');
+      $address=$request->post('org_addr');
+      $up_addr = array(
+            'org_number' => $number,
+            'org_email' => $email,
+            'org_address' => $address,
+            'updated_at'=>$current_date
+             );
+        if(DB::table('about_us_details')->where(['id'=>"1"])->update($up_addr)){
+         return redirect('view-about-us')->with(['success' => 'Your Details Successfully Updated']);
+        }
+    }
 
 }

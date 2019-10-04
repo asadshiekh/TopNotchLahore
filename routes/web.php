@@ -80,7 +80,17 @@ Route::any('delete-item/{id}','Admin_Controllers\MainController@doDelMenuItem');
 
 Route::any('open_model_window','Admin_Controllers\MainController@doOpenUpdateModel');
 
+Route::any('update-item-menu','Admin_Controllers\MainController@doUpdateMenuItem');
+
 //menu routes end
+
+// about us routes start
+
+Route::any('view-about-us','Admin_Controllers\MainController@viewAboutUsPage');
+
+Route::any('edit-about-us','Admin_Controllers\MainController@editAboutUsDetail');
+
+// about us routes end
 
 Route::any('do-login','Admin_Controllers\LoginAdmin@doLoginAccount');
 

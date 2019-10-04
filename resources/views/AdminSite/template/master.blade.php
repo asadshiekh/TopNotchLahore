@@ -82,7 +82,8 @@
                   <ul class="nav child_menu">
                     <li><a href="{{url('change-logo')}}">Change Logo</a></li>
                     <li><a href="{{url('add-menu-category')}}">Menu Categories</a></li>
-                     <li><a href="{{url('view-menu-page')}}">Manage Menu</a></li>
+                    <li><a href="{{url('view-menu-page')}}">Manage Menu</a></li>
+                    <li><a href="{{url('view-about-us')}}">Manage About Us</a></li>
                   
                   </ul>
                 </li>

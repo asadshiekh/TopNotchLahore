@@ -15,6 +15,7 @@ class AddMenuItem extends Migration
     {
         Schema::create('add_menu_item', function (Blueprint $table) {
             $table->increments('item_id');
+            $table->string('item_category');
             $table->string('item_name');
             $table->string('item_price');
             $table->string('item_des');
