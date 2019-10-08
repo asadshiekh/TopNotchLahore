@@ -3,7 +3,7 @@
             <div id="wrapper">
                 <div class="content">
                     <section class="parallax-section header-section">
-                        <div class="bg bg-parallax" style="background-image:url(images/bg/32.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="bg bg-parallax" style="background-image:url(public/Client_Assests/images/contact1.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
                         <div class="overlay"></div>
                         <div class="container">
                             <h2>Our contacts</h2>
@@ -57,13 +57,13 @@
                                 <div class="col-md-12">
                                     <div class="section-title">
                                         <h3>Our location</h3>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                   <!--  <section class="no-padding">
+                    <!-- <section class="no-padding"> -->
                         <div class="map-box">
                             <div class="map-holder" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
                                 <div id="map">
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section> -->
+                    <!-- </section> -->
                     
                     <!-- <section>
                         <div class="triangle-decor"></div>
@@ -100,17 +100,28 @@
                         </div>
                     </section> -->
                 </div>
-    
+    <style type="text/css">
+    #map{
+        height: 500px;
+        width: 100%;
+
+    }
+    </style>
     <script>
-      var map;
       function initMap() {
-        // The location of Uluru
-  var uluru = {lat: 31.5083, lng: 74.4296};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 16, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+      // The location of Uluru
+      var TopNot = {lat: 31.5083, lng: 74.4296};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+          document.getElementById('map'), {
+            zoom: 16,
+             center: TopNot});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: TopNot,
+         map: map,
+
+     });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7yb5tfckCeROvXkiQOOpR0bv9M_scdQ&callback=initMap"
