@@ -70,6 +70,9 @@
                                 </div>
                            <!--  </div> -->
                         </div>
+                         <div id="map">
+                                    
+                                </div>
                     </section>
                     <!-- <section>
                         <div class="triangle-decor"></div>
@@ -99,42 +102,36 @@
                     </section> -->
                 </div>
 
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJjtzMZotb60YwDCSgUSmsj4i4oGFZLjQ&callback=initMap"
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJjtzMZotb60YwDCSgUSmsj4i4oGFZLjQ&callback=initMap"
     async defer></script>
 
     <script type="text/javascript">
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 30.3753, lng: 69.3451},
-          zoom: 14
-        });
-      }
+     
 
 
-        // function initMap(){
-        //     var res="yes";
-        //      var Pak = {lat:30.3753 , lng:69.3451};
-        //         var map = new google.maps.Map(document.getElementById('map'), {
-        //           center: Pak,
-        //           zoom: 10
-        //         });
+        function initMap(){
+            var res="yes";
+             var Pak = {lat:30.3753 , lng:69.3451};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: Pak,
+                  zoom: 10
+                });
                
 
               
-        //         var marker = new google.maps.Marker({
-        //               position: Pak,
-        //               map: map,
-        //               title: res,
+                var marker = new google.maps.Marker({
+                      position: Pak,
+                      map: map,
+                      title: res,
                    
-        //             });
+                    });
               
-                 // google.maps.event.addListener(marker, 'dragend', function(marker) {
-                 //    var latLng = marker.latLng;
-                 //    document.getElementById('lat-span').innerHTML = latLng.lat();
-                 //    document.getElementById('lon-span').innerHTML = latLng.lng();
-                 // });
-        //}
+                 google.maps.event.addListener(marker, 'dragend', function(marker) {
+                    var latLng = marker.latLng;
+                    // document.getElementById('lat-span').innerHTML = latLng.lat();
+                    // document.getElementById('lon-span').innerHTML = latLng.lng();
+                 });
+        }
 
 
     </script>
