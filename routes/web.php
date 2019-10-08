@@ -17,6 +17,11 @@ Route::any('email',function(){
 	return view('ClientSite/mail');
 });
 
+Route::any('email',function(){
+
+	return view('ClientSite/mail');
+});
+
 
 // Manage Client Site
 

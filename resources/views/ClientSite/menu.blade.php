@@ -10,7 +10,7 @@
                 <h3>Pellentesque habitant morb</h3>
             </div>
         </section>
-        <section>
+        <section id="menu-sec">
             <div class="triangle-decor"></div>
             <div class="menu-bg lbd" style="background-image:url({{url('public/Client_Assests/images/menu/1.png')}})" data-top-bottom="transform: translateX(200px);" data-bottom-top="transform: translateX(-200px);">
             </div>
