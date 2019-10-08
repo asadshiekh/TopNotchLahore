@@ -57,23 +57,22 @@
                                 <div class="col-md-12">
                                     <div class="section-title">
                                         <h3>Our location</h3>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="no-padding">
+                   <!--  <section class="no-padding">
                         <div class="map-box">
-                           <!--  <div class="map-holder" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"> -->
+                            <div class="map-holder" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
                                 <div id="map">
                                     
                                 </div>
-                           <!--  </div> -->
+                            </div>
                         </div>
-                         <div id="map">
-                                    
-                                </div>
-                    </section>
+                    </section> -->
+                    
                     <!-- <section>
                         <div class="triangle-decor"></div>
                         <div class="container">
@@ -101,40 +100,19 @@
                         </div>
                     </section> -->
                 </div>
-
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJjtzMZotb60YwDCSgUSmsj4i4oGFZLjQ&callback=initMap"
-    async defer></script>
-
-    <script type="text/javascript">
-     
-
-
-        function initMap(){
-            var res="yes";
-             var Pak = {lat:30.3753 , lng:69.3451};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                  center: Pak,
-                  zoom: 10
-                });
-               
-
-              
-                var marker = new google.maps.Marker({
-                      position: Pak,
-                      map: map,
-                      title: res,
-                   
-                    });
-              
-                 google.maps.event.addListener(marker, 'dragend', function(marker) {
-                    var latLng = marker.latLng;
-                    // document.getElementById('lat-span').innerHTML = latLng.lat();
-                    // document.getElementById('lon-span').innerHTML = latLng.lng();
-                 });
-        }
-
-
+    
+    <script>
+      var map;
+      function initMap() {
+        // The location of Uluru
+  var uluru = {lat: 31.5083, lng: 74.4296};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+      }
     </script>
-
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7yb5tfckCeROvXkiQOOpR0bv9M_scdQ&callback=initMap"
+    async defer></script>
         @endsection
