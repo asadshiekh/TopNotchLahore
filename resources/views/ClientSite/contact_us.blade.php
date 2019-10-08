@@ -1,5 +1,6 @@
 @extends('ClientSite.master')
 @section('content')
+
             <div id="wrapper">
                 <div class="content">
                     <section class="parallax-section header-section">
