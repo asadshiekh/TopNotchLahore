@@ -53,35 +53,35 @@ class MainController extends Controller
 		Mail::send(new newMail());
 	}
 
-	public function doReserveSeat(Request $request){
-      $current_date = date("Y.m.d h:i:s");
-      $name=$request->post('name');
-      $email=$request->post('email');
-      $phone=$request->post('phone');
-      $resdate=$request->post('resdate');
-      $time=$request->post('restime');
-      if($request->post('resperson')){
-        $person=$request->post('resperson');
-      }else{
-        $person=$request->post('other_seats');
-      }
+	// public function doReserveSeat(Request $request){
+ //      $current_date = date("Y.m.d h:i:s");
+ //      $name=$request->post('name');
+ //      $email=$request->post('email');
+ //      $phone=$request->post('phone');
+ //      $resdate=$request->post('resdate');
+ //      $time=$request->post('restime');
+ //      if($request->post('resperson')){
+ //        $person=$request->post('resperson');
+ //      }else{
+ //        $person=$request->post('other_seats');
+ //      }
       
       
 
-      $res=array(
-        'person_name'=>$name,
-        'person_email'=>$email,
-        'person_phone'=>$phone,
-        'res_date'=>$resdate,
-        'res_time'=>$time,
-        'res_persons'=>$person,
-        'created_at'=>$current_date,
-      );
+ //      $res=array(
+ //        'person_name'=>$name,
+ //        'person_email'=>$email,
+ //        'person_phone'=>$phone,
+ //        'res_date'=>$resdate,
+ //        'res_time'=>$time,
+ //        'res_persons'=>$person,
+ //        'created_at'=>$current_date,
+ //      );
 
-      if(DB::table('reservation_order')->insert($res)){
-         return redirect('Reservation')->with(['success' => 'Your Request Successfully Sent']);
-      }
-    }
+ //      if(DB::table('reservation_order')->insert($res)){
+ //         return redirect('Reservation')->with(['success' => 'Your Request Successfully Sent']);
+ //      }
+ //    }
 
 
 }

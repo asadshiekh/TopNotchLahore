@@ -91,7 +91,7 @@ Route::any('update-item-menu','Admin_Controllers\MainController@doUpdateMenuItem
 //menu routes end
 
 // reservation start
-Route::any('do-reserve','Site_Controllers\MainController@doReserveSeat');
+// Route::any('do-reserve','Site_Controllers\MainController@doReserveSeat');
 // reservation end
 
 // about us routes start
