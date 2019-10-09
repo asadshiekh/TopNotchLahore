@@ -19,7 +19,8 @@ Route::any('email',function(){
 
 Route::any('topnotchlahore_map',function(){
 
-	return view('ClientSite/topnotchlahore_map');
+	return view('ClientSite/topnotchdemo_map');
+	
 });
 
 

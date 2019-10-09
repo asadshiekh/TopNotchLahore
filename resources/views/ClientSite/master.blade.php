@@ -117,6 +117,7 @@
 
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--=============== scripts  ===============-->
+<script type="text/javascript" src="{{url('public/Client_Assests/js/map.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/plugins.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/scripts.js')}}"></script>
