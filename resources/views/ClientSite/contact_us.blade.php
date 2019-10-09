@@ -15,7 +15,7 @@
                         <div class="triangle-decor"></div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-9">
                                     <div class="contact-details">
                                         <h3>Contact info</h3>
                                         <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
@@ -31,7 +31,7 @@
                                             <li><a href="#">yourmail@domain.com</a></li>
                                         </ul>
                                     </div>
-                                    <div class="contact-details">
+                                    <!-- <div class="contact-details">
                                         <h4>Lambert - Washington</h4>
                                         <ul>
                                             <li><a href="#">27th Brooklyn New York, NY 10065</a></li>
@@ -49,7 +49,7 @@
                                             <li><a href="#">yourmail@domain.com</a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="bold-separator">
                                 <span></span>

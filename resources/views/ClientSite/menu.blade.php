@@ -7,7 +7,7 @@
             <div class="overlay"></div>
             <div class="container">
                 <h2>Hot dishes</h2>
-                <h3>Pellentesque habitant morb</h3>
+                <!-- <h3>Pellentesque habitant morb</h3> -->
             </div>
         </section>
         <section id="menu-sec">
@@ -63,7 +63,7 @@
                         <div class="col-md-6">
                             <!--menu item-->
                             <div class="menu-item  hot-deal">
-                                <span class="hot-desc">Chef selection</span>
+                                <span class="hot-desc">Chef Selection</span>
                                 <div class="menu-item-details">
                                     <div class="menu-item-desc"><a href="{{url('public/Client_Assests/images/bg/14.jpg')}}" class="image-popup">Roast Chicken</a></div>
                                     <div class="menu-item-dot"></div>
@@ -115,13 +115,13 @@
             <div class="overlay"></div>
             <div class="container">
                 <h2>Dessert</h2>
-                <h3>Aenean ultricies mi vitae est</h3>
+                <!-- <h3>Aenean ultricies mi vitae est</h3> -->
                 <div class="bold-separator">
                     <span></span>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="menu-sec">
             <div class="triangle-decor"></div>
             <div class="menu-bg rbd" style="background-image:url({{url('public/Client_Assests/images/menu/2.png')}})" data-top-bottom="transform: translateX(-200px);" data-bottom-top="transform: translateX(200px);"></div>
             <div class="container">
@@ -253,13 +253,13 @@
             <div class="overlay"></div>
             <div class="container">
                 <h2>Drinks </h2>
-                <h3>Donec eu libero</h3>
+                <!-- <h3>Donec eu libero</h3> -->
                 <div class="bold-separator">
                     <span></span>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="menu-sec"> 
             <div class="triangle-decor"></div>
             <div class="menu-bg lbd" style="background-image:url({{url('public/Client_Assests/images/menu/3.png')}})" data-top-bottom="transform: translateX(200px);" data-bottom-top="transform: translateX(-200px);">
             </div>
@@ -373,18 +373,18 @@
                 </div>
             </div>
         </section>
-                <section class="parallax-section">
+        <section class="parallax-section">
             <div class="bg bg-parallax" style="background-image:url({{url('public/Client_Assests/images/bg/17.jpg')}})" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
             <div class="overlay"></div>
             <div class="container">
                 <h2>Others</h2>
-                <h3>Aenean ultricies mi vitae est</h3>
+                <!-- <h3>Aenean ultricies mi vitae est</h3> -->
                 <div class="bold-separator">
                     <span></span>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="menu-sec">
             <div class="triangle-decor"></div>
             <div class="menu-bg rbd" style="background-image:url({{url('public/Client_Assests/images/menu/2.png')}})" data-top-bottom="transform: translateX(-200px);" data-bottom-top="transform: translateX(200px);"></div>
             <div class="container">

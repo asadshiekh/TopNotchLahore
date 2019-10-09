@@ -42,8 +42,8 @@
                         <!--logo-->
                         <div class="logo-holder">
                             <a href="{{url('/')}}">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="" style="width: 130%">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="" style="width: 100%">
                             </a>
                         </div>
                         <!--Navigation -->
@@ -59,9 +59,9 @@
                                         <li><a href="#">Drop down </a></li>
                                     </ul> -->
                                 </li>
-                                <li><a href="{{url('Menu')}}">Menu</a></li>
-                                 <li><a href="{{url('Menu')}}">Kitchen Garden</a></li>
                                 <li><a href="{{url('Reservation')}}">Reservation</a></li>
+                                <li><a href="{{url('Menu')}}">Menu</a></li>
+                                <li><a href="#">Kitchen Garden</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="{{url('Contact-Us')}}">Contact</a></li>
                             </ul>
