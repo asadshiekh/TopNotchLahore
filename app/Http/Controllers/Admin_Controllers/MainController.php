@@ -61,7 +61,7 @@ class MainController extends Controller
                 'created_at'=>$current_date
             );
             if(DB::table('menu_category')->insert($cat_add)){
-                return redirect('add-menu-category')->with(['success' => 'Welcome To the Admin-Panel']);
+                return redirect('add-menu-category')->with(['success' => 'Category Successfully Added']);
             }
         }
 
@@ -327,6 +327,6 @@ class MainController extends Controller
         }
     }
 
-    
+
 
 }
