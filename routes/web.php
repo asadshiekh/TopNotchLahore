@@ -90,6 +90,10 @@ Route::any('update-item-menu','Admin_Controllers\MainController@doUpdateMenuItem
 
 //menu routes end
 
+// reservation start
+Route::any('do-reserve','Site_Controllers\MainController@doReserveSeat');
+// reservation end
+
 // about us routes start
 
 Route::any('view-about-us','Admin_Controllers\MainController@viewAboutUsPage');

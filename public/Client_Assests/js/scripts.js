@@ -487,30 +487,30 @@ function initLambert() {
         $("#message2").slideUp(1500);
     });
 	// reservation form------------------
-    $("#reservation-form").submit(function() {
-        var a = $(this).attr("action");
+    // $("#reservation-form").submit(function() {
+    //     var a = $(this).attr("action");
 
-        $("#message").slideUp(750, function() {
-            $("#message").hide();
-            $("#submit-res").attr("disabled", "disabled");
-            $.post(a, {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                phone: $("#phone").val(),
-                resdate: $("#resdate").val(),
-                restime: $("#restime").val(),
-                resrest: $("#resrest").val(),
-                numperson: $("#numperson").val(),
-                comments: $("#comments").val()
-            }, function(a) {
-                document.getElementById("message").innerHTML = a;
-                $("#message").slideDown("slow");
-                $("#submit-res").removeAttr("disabled");
-                if (null != a.match("success")) $("#contactform").slideDown("slow");
-            });
-        });
-        return false;
-    });
+    //     $("#message").slideUp(750, function() {
+    //         $("#message").hide();
+    //         $("#submit-res").attr("disabled", "disabled");
+    //         $.post(a, {
+    //             name: $("#name").val(),
+    //             email: $("#email").val(),
+    //             phone: $("#phone").val(),
+    //             resdate: $("#resdate").val(),
+    //             restime: $("#restime").val(),
+    //             resrest: $("#resrest").val(),
+    //             numperson: $("#numperson").val(),
+    //             comments: $("#comments").val()
+    //         }, function(a) {
+    //             document.getElementById("message").innerHTML = a;
+    //             $("#message").slideDown("slow");
+    //             $("#submit-res").removeAttr("disabled");
+    //             if (null != a.match("success")) $("#contactform").slideDown("slow");
+    //         });
+    //     });
+    //     return false;
+    // });
     $("#reservation-form input, #reservation-form textarea ").keyup(function() {
         $("#message").slideUp(1500);
     });

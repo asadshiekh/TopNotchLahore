@@ -11,24 +11,26 @@
                             <h3>Were to find us</h3>
                         </div>
                     </section>
-                    <section>
+                    <section id="menu-sec">
                         <div class="triangle-decor"></div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-lg-6">
                                     <div class="contact-details">
                                         <h3>Contact info</h3>
-                                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
-                                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
+                                        <p> At TOP NOTCH you're always welcome TOP NOTCH offers the perfect setting for families and friends to meet, talk and eat in a comfortable and relaxed atmosphere. </p>
+<p>If you have an enquiry, feedback or want to talk to us about reservations there are a number of ways you can reach us.</p>
+                                    
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-3">
                                     <div class="contact-details">
-                                        <h4>Lambert  - New York City</h4>
+                                        <h4>TopNotch  - Lahore</h4>
                                         <ul>
-                                            <li><a href="#">27th Brooklyn New York, NY 10065</a></li>
-                                            <li><a href="#">+7(111)123456789</a></li>
-                                            <li><a href="#">yourmail@domain.com</a></li>
+                                            <li><a href="{{url('Reservation')}}">Reserve A Table</a></li>
+                                            <li>(+92)324 999 8787</li>
+                                            <li>TopNotchLahore@gmail.com</li>
                                         </ul>
                                     </div>
                                     <!-- <div class="contact-details">
@@ -111,6 +113,7 @@
     <script>
       function initMap() {
       // The location of Uluru
+      var res="TopNotch, Restaurant Lahore Polo & Country Club, Eden City (Ex) Air Avenue DHA Phase 8 Lahore";
       var TopNot = {lat: 31.5083, lng: 74.4296};
       // The map, centered at Uluru
       var map = new google.maps.Map(
@@ -121,8 +124,12 @@
       var marker = new google.maps.Marker({
         position: TopNot,
          map: map,
+         title:res
 
      });
+
+   
+
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7yb5tfckCeROvXkiQOOpR0bv9M_scdQ&callback=initMap"

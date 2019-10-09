@@ -42,8 +42,8 @@
                         <!--logo-->
                         <div class="logo-holder">
                             <a href="{{url('/')}}">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="" style="width: 130%">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="" style="width: 100%">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="" style="width: 125%">
+                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="" style="width: 125%">
                             </a>
                         </div>
                         <!--Navigation -->

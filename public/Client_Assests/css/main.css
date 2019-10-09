@@ -202,7 +202,7 @@
 
 }
 /*menu items */
- .menu-item-details a, .menu-item-details,.menu-item p,.parallax-section h2{
+ .menu-item-details a, .menu-item-details,.menu-item p,.parallax-section h2,.colr-gold,.inner{
    background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -220,11 +220,32 @@
 .triangle-decor {
   display: none;
 }
-.menu-item-price{
+.menu-item-price,.contact-details,.contact-details ul li a{
    background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+}
+.contact-details ul li{
+line-height:2.0;
+}
+
+.reservation-form form input[placeholder]#contact-form input[type="text"], #contact-form textarea, #comment-form input[type="text"], #comment-form textarea, #reservation-form input, #reservation-form select, #reservation-form textarea{
+  /*  background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color: #bda86c;
+    border-color: #bda86c;
+}
+#reservation-form input::placeholder{
+color: #bda86c;
+}
+nav{
+  margin-top: 8px !important;
+}
+.contact-details h4 {
+  font-size: 18px !important;
+  margin-top: 15px;
 }
 .hero-content:before,.hero-content:after,.hero-link,.hero-line {
 /*  background: linear-gradient(30deg,#b6712b 0%,#F2EA91 20%,#b6712b 100%) !important;*/
