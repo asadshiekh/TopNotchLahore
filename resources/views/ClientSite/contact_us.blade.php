@@ -60,6 +60,9 @@
                                 <div class="col-md-12">
                                     <div class="section-title">
                                         <h3>Our location</h3>
+                                        <input type="hidden" name="start" id="start" value="TopNotch, Restaurant Lahore Polo & Country Club, Eden City (Ex) Air Avenue DHA Phase 8 Lahore" />
+                                        <input type="hidden" name="end" id="end" value="Euro Store DHA phase * parkview Lahore Cantt" />
+                                        <!-- <button class="btn" onclick="calcROute();">Click me</button> -->
 
                                     </div>
                                 </div>
@@ -112,27 +115,90 @@
     </style>
     <script>
       function initMap() {
+       var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+       
       // The location of Uluru
       var res="TopNotch, Restaurant Lahore Polo & Country Club, Eden City (Ex) Air Avenue DHA Phase 8 Lahore";
       var TopNot = {lat: 31.5083, lng: 74.4296};
+      var DHA = {lat: 31.4899, lng: 74.4496};
       // The map, centered at Uluru
       var map = new google.maps.Map(
           document.getElementById('map'), {
             zoom: 16,
-             center: TopNot,
+             // center: {lat: 41.85, lng: -87.65}
          });
       // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({
-        position: TopNot,
-         map: map,
-         title:res
+     //  var marker = new google.maps.Marker({
+     //    position: TopNot,
+     //     map: map,
+     //     title:res
 
-     });
+     // });
+      directionsRenderer.setMap(map);
 
-   
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsRenderer);
+        };
+         document.getElementById('start').addEventListener('change', onChangeHandler);
+         document.getElementById('end').addEventListener('change', onChangeHandler);
 
       }
+      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+        var TopNot = {lat: 31.5083, lng: 74.4296};
+        var DHA = {lat: 31.4899, lng: 74.4496};
+        directionsService.route(
+            {
+              origin: {query: document.getElementById('start').value},
+              destination: {query: document.getElementById('end').value},
+              travelMode: 'DRIVING'
+            },
+            function(response, status) {
+              if (status === 'OK') {
+                var dir=directionsRenderer.setDirections(response);
+                
+              } else {
+                window.alert('Directions request failed due to ' + status);
+              }
+              alert(dir);
+            });
+      }
     </script>
+    <script type="text/javascript">
+        // var directionsDisplay = new google maps DirectionsRenderer();
+        // var directionsService = new google maps DirectionsService();
+        // var map;
+        // var TopNot = {lat: 31.5083, lng: 74.4296};
+        //  var DHA = {lat: 31.4899, lng: 74.4496};
+        // // var boudha = new google maps LatLng(27.721503, 85.362072);
+        // // var hattisar = new google maps LatLng(27.711360, 85.318781);
+        // var mapOptions = {
+        //     zoom:14,
+        //     center:boudha
+        // };
+        // map = new google maps Map(document.getElementById('map'),mapOptions);
+        // directionsDisplay setMap(map);
+        // alert("yes");
+
+        // function calculateRoute(){
+        //     var request = {
+        //         origin:TopNotT,
+        //         destination:DHA,
+        //         travelMode:'DRIVING'
+        //     };
+        //     directionsService route(request, function(result, status){
+        //         if(status == "ok"){
+        //             directionsDisplay setDirections(result);
+        //         }
+        //     });
+        // }
+
+        // function calcROute(){
+        //     calculateRoute();
+        // }
+
+    </script>
+ 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7yb5tfckCeROvXkiQOOpR0bv9M_scdQ&callback=initMap"
     async defer></script>
         @endsection
