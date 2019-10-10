@@ -224,6 +224,7 @@
    background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 15px;
 
 }
 .contact-details ul li{
@@ -253,8 +254,8 @@ nav{
 /*  background: linear-gradient(30deg, #2e1a0c 0%, #b6712b 40%,#F2EA91 60%, #492d12 100%);*/
   /*background: linear-gradient(30deg, #2e1a0c 0%, #b6712b 50%, #492d12 100%);*/
 }
-.logo-vis{
-    /*width: 120% !important;*/
+.logo-vis,.logo-notvis{
+    width: 125% !important;
     }
 
 @media (max-width: 767.98px) {

@@ -7,7 +7,7 @@
                         <div class="bg bg-parallax" style="background-image:url(public/Client_Assests/images/contact1.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
                         <div class="overlay"></div>
                         <div class="container">
-                            <h2>Our contacts</h2>
+                            <h2>Contact Us</h2>
                             <h3>Were to find us</h3>
                         </div>
                     </section>
@@ -30,7 +30,7 @@
                                         <ul>
                                             <li><a href="{{url('Reservation')}}">Reserve A Table</a></li>
                                             <li>(+92)324 999 8787</li>
-                                            <li>TopNotchLahore@gmail.com</li>
+                                            <li>topnotchlahore@gmail.com</li>
                                         </ul>
                                     </div>
                                     <!-- <div class="contact-details">
@@ -119,7 +119,8 @@
       var map = new google.maps.Map(
           document.getElementById('map'), {
             zoom: 16,
-             center: TopNot});
+             center: TopNot,
+         });
       // The marker, positioned at Uluru
       var marker = new google.maps.Marker({
         position: TopNot,

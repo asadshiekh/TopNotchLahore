@@ -2754,7 +2754,8 @@ article h4 a:hover {
     transition: all 200ms linear;
 }
 #submit:hover , #submit-res:hover{
-	color:#fff;
+	/*color:#fff;*/
+	 color: #bda86c;
 }
 .reservation-form-holder  #submit-res {
 	margin-top:50px;

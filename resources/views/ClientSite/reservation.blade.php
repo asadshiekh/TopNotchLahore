@@ -35,7 +35,7 @@
                         <div class="reservation-form-holder">
                             <div class="reservation-form">
                                 <div id="message"></div>
-                                <form action="{{url('Reservation')}}"  method="post" name="reservationform" id="reservation-form">
+                                <form action="#" name="reservationform" id="reservation-form">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-1"></div>
@@ -95,7 +95,7 @@
                                         </div>
                                         
                                     </div>
-                                    <button type="submit" id="submit-res">Make a reservation</button>
+                                    <button type="button" id="submit-res">Make a reservation</button>
                                 </form>
                             </div>
                         </div>

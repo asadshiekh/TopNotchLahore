@@ -18,7 +18,7 @@
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/color.css')}}">
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/main.css')}}">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="{{url('public/Client_Assests/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="http://www.demo.topnotchlahore.com/public/Client_Assests/images/favicon.ico">
     </head>
     <body>
         <div class="loader"><img src="{{url('public/Client_Assests/images/top-notch-logo.png')}}" alt=""></div>
@@ -42,8 +42,9 @@
                         <!--logo-->
                         <div class="logo-holder">
                             <a href="{{url('/')}}">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-vis" alt="" style="width: 125%">
-                                <img src="{{url('uploads/logo')}}/{{$web_logo->logo}}" class="respimg logo-notvis" alt="" style="width: 125%">
+                                <img src="{{url('public/Client_Assests/images/top-notch-logo.png')}}" class="respimg logo-vis" alt="" style="width: 125%">
+                                <img src="{{url('public/Client_Assests/images/top-notch-logo.png')}}" class="respimg logo-notvis" alt="" style="width: 125%">
+                        
                             </a>
                         </div>
                         <!--Navigation -->

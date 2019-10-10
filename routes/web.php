@@ -27,10 +27,10 @@ Route::any('topnotchlahore_map',function(){
 // Manage Client Site
 
 // HOME
-Route::get('/','Site_Controllers\MainController@viewHome');
+Route::get('/','Site_Controllers\MainController@viewIndex');
 
 // INDEX
-Route::get('index','Site_Controllers\MainController@viewIndex');
+// Route::get('index','Site_Controllers\MainController@viewIndex');
 
 //MENU
 Route::get('Menu','Site_Controllers\MainController@viewMenu');
