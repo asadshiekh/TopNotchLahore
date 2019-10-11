@@ -42,7 +42,7 @@
             <!-- Start Content-->
             <form enctype="multipart/form-data" method="post" action="{{url('do-upload-cat')}}">
              @csrf
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-2">
+            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <label>Category Name:</label>
               <div class="input-group">
                 <div class="input-group-addon">
@@ -52,7 +52,7 @@
                 <input type="text" class="form-control" name="cat_name" id="cat_name" placeholder="Enter Category Name">
               </div>
             </div>
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-2">
+            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <label>Category Image:</label>
               <div class="input-group">
                 <div class="input-group-addon">
@@ -62,7 +62,7 @@
                 <input type="file" class="form-control" name="cat_img" id="cat_img" placeholder="Upload Image">
               </div>
             </div>
-            <div class="form-group col-sm-12 col-md-6 col-md-offset-2">
+            <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <div class="input-group" style="padding-top: 23px;">
                <input type="submit" class="btn btn-success btn-md" name="about_btn" value="Add Category">
               </div>
@@ -74,7 +74,7 @@
                 <h3 class="box-title text-center" id="heading-head" style="font-family:'Courier New', Courier, monospace; padding: 4%;">View Menu Categories<small style="font-family:'italic',bold"> Here... </small></h3>
               </div>
 
-              <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action responsive no-wrap" style="width: 80%;text-align: center;">
+              <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action responsive no-wrap" style="width: 100%;text-align: center;">
 
                   <thead>
                     <tr id="city-tr">

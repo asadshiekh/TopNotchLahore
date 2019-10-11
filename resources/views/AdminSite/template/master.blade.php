@@ -46,7 +46,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><span class="fa fa-smile-o"></span> <span style="font-family: georgia regular;font-size: 20px;">TopNotch!</span></a>
+            <a href="index.html" class="site_title"><!-- <span class="fa fa-smile-o"></span> --><img src="public/admin_assets/images/horseloader.png" style="height: 10%;width: 10%;" /> <span style="font-family: georgia regular;font-size: 20px;">TopNotch!</span></a>
           </div>
 
           <div class="clearfix"></div>
