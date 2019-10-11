@@ -63,7 +63,7 @@
                                 <li><a href="{{url('Reservation')}}">Reservation</a></li>
                                 <li><a href="{{url('Menu')}}">Menu</a></li>
                                 <li><a href="#">Kitchen Garden</a></li>
-                                <li><a href="#">About</a></li>
+                                <li><a href="{{url('about-us')}}">About</a></li>
                                 <li><a href="{{url('Contact-Us')}}">Contact</a></li>
                             </ul>
                         </nav>

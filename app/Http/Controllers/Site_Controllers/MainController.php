@@ -34,6 +34,15 @@ class MainController extends Controller
 		return view('ClientSite/reservation',['page_title'=>$title,'about'=>$about]);	
 	}
 
+	public function viewAboutUs(){
+		$title="TopNotch - About Us";
+		//$logo=DB::table('website_logo')->select('logo')->where(['id'=>'1'])->first();
+		$about=DB::table('about_us_details')->where(['id'=>'1'])->first();
+		return view('ClientSite/about_us',['page_title'=>$title,'about'=>$about]);
+
+
+	}
+
 	public function viewContactUs(){
 		$title="TopNotch - Contact Us";
 		//$logo=DB::table('website_logo')->select('logo')->where(['id'=>'1'])->first();
