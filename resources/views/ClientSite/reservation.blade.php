@@ -54,7 +54,7 @@
                                         <div class="col-12 col-md-5">
                                             <h3 class="colr-gold">Book a table</h3>
                                             <!--date-->
-                                            <input name="resdate" class="myInput" id="resdate" data-lang="en" data-years="2015-2016" data-format="YYYY-MM-DD" data-sundayfirst="false" value="Date" onClick="this.select()" >
+                                            <input  type="date" name="date" value="Date" >
                                             <!--time-->
                                             <select id="restime" name="restime" class="form-control">
                                                 

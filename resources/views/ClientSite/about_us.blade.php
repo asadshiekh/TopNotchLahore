@@ -3,31 +3,22 @@
 <!--=============== wrapper ===============-->
 <div id="wrapper">
     <!--=============== Hero content ===============-->
-    <div class="content full-height hero-content">
-        <div class="slideshow-container" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
-            <!-- slideshow -->
-            <div class="slides-container">
-                <!-- 1 -->
-                <div class="bg" style="background-image: url({{url('public/Client_Assests/images/about_us.jpg')}})"></div>
-            </div>
-        </div>
-        <div class="hero-title-holder">
-            <div class="overlay"></div>
-            <div class="hero-title">
-               <!--  <div class="hero-decor b-dec">
-                    <div class="half-circle"></div>
-                </div> -->
-                <div class="separator color-separator"></div>
-                <!-- <h3 style="font-size:20px;">FROM FARM TO GARDEN</h3>
-                <h4>Some Description</h4> -->
-            </div>
-        </div>
-        <div class="hero-link">
-            <a class="custom-scroll-link" href="#sec1"><i class="fa fa-angle-double-down"></i></a>
-        </div>
-    </div>
+
+
     <!--hero end-->
     <div class="content">
+
+     <!--=============== Hero content ===============-->
+                    <section class="parallax-section header-section">
+                        <div class="bg bg-parallax" style="background-image:url(public/Client_Assests/images/about_us.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <h2>About Us</h2>
+                            <h3>the Fine Dine Restaurant</h3>
+                        </div>
+                    </section>
+                <!--hero end-->
+
         <!--=============== About ===============-->
         <section class="about-section" id="sec1">
             <div class="container">
