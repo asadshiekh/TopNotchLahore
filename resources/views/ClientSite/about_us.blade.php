@@ -20,7 +20,7 @@
                 <!--hero end-->
 
         <!--=============== About ===============-->
-        <section class="about-section" id="sec1">
+        <section class="about-section about-sec" id="sec1">
             <div class="container">
                 <div class="row">
                     <!--about text-->
@@ -62,7 +62,7 @@
         </section>
 
         <!--=============== About 2 ===============-->
-        <section class="about-section">
+        <section class="about-section about-sec">
             <!-- triangle decoration-->
             <div class="triangle-decor">
             </div>
@@ -106,7 +106,7 @@
         <!--section end-->
         
         <!--=============== team ===============-->
-        <section id="sec3">
+        <section id="sec3" class="about-sec">
             <div class="triangle-decor"></div>
             <div class="container">
                 <div class="section-title">
