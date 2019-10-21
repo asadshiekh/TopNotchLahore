@@ -48,8 +48,8 @@
                 <div class="input-group-addon">
                   <i class="fab fa-yelp"></i>
                 </div>
-                <select name="selected_cat" id="selected_cat" class="form-control">
-                  <option selected="selected" hidden>Select Category</option>
+                <select name="selected_cat" id="selected_cat" class="form-control" required="required">
+                  <option selected="selected" value="" hidden>Select Category</option>
                   @foreach($cats as $cats)
                   <option class="form-control" value="{{$cats->cat_name}}"><?php echo str_replace("_"," ",$cats->cat_name);?></option>
                   @endforeach
@@ -63,7 +63,7 @@
                   <i class="fas fa-i-cursor"></i>
 
                 </div>
-                <input type="text" class="form-control" name="item_name" id="item_name" placeholder="Enter Name">
+                <input type="text" class="form-control" name="item_name" id="item_name" placeholder="Enter Name" required="required">
               </div>
             </div>
             
@@ -74,7 +74,7 @@
                   <i class="fas fa-dollar-sign"></i>
 
                 </div>
-                <input type="text" class="form-control" name="item_price" id="item_price" placeholder="Enter Price">
+                <input type="text" class="form-control" name="item_price" id="item_price" placeholder="Enter Price" required="required">
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -84,7 +84,7 @@
                   <i class="fas fa-info"></i>
 
                 </div>
-                <textarea type="text" class="form-control" name="item_des" id="item_des" placeholder="Write Some Description"></textarea>
+                <textarea type="text" class="form-control" name="item_des" id="item_des" placeholder="Write Some Description" required="required"></textarea>
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -95,13 +95,13 @@
 
                 <label style="margin-left: 20px;">Chef Selection:</label>
                 <input type="radio" value="chef"  name="item_type" onchange="show_per(this.value);">
-
+<!-- 
                 <label style="margin-left: 20px;">Sale:</label>
-                 <input type="radio" value="sale"  name="item_type" onchange="show_per(this.value);">
+                 <input type="radio" value="sale"  name="item_type" onchange="show_per(this.value);"> -->
 
-                <div class="percent-div" style="display: inline-block;">
+<!--                 <div class="percent-div" style="display: inline-block;">
                 <input type="text" name="item_discount" placeholder="Enter Discount e.g:(20)">&nbsp;&nbsp;&nbsp;<span style="font-size:16px;font-weight: bold;">%</span>
-              </div>
+              </div> -->
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
               <div class="input-group" style="padding-top: 23px;">
@@ -189,12 +189,14 @@
                     <label style="margin-left: 20px;">Chef Selection:</label>
                     <input type="radio" value="chef"  id="item_type_chef" name="up_item_type" onchange="show_per(this.value);">
 
-                    <label style="margin-left: 20px;">Sale:</label>
+<!--                     <label style="margin-left: 20px;">Sale:</label>
                      <input type="radio" value="sale" id="item_type_sale" name="up_item_type" onchange="show_per(this.value);">
 
                     <div class="percent-div" style="display: inline-block;">
-                    <input type="text" name="up_item_discount" id="up_item_discount" placeholder="Enter Discount e.g:(20)">&nbsp;&nbsp;&nbsp;<span style="font-size:16px;font-weight: bold;">%</span>
+                    <input type="text" name="up_item_discount" id="up_item_discount" placeholder="Enter Discount e.g:(20)">&nbsp;&nbsp;&nbsp;<span style="font-size:16px;font-weight: bold;">%</span> -->
                   </div>
+
+
                 </div>
            
               </div>

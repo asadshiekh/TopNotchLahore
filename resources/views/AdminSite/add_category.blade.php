@@ -49,7 +49,7 @@
                   <i class="fas fa-i-cursor"></i>
 
                 </div>
-                <input type="text" class="form-control" name="cat_name" id="cat_name" placeholder="Enter Category Name">
+                <input type="text" required="required" class="form-control" name="cat_name" id="cat_name" placeholder="Enter Category Name">
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -59,7 +59,7 @@
                   <i class="fas fa-image"></i>
 
                 </div>
-                <input type="file" class="form-control" name="cat_img" id="cat_img" placeholder="Upload Image">
+                <input type="file" required="required" class="form-control" name="cat_img" id="cat_img" placeholder="Upload Image">
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -136,7 +136,7 @@
           <div class="input-group-addon">
             <i class="fa fa-yelp"></i>
           </div>
-          <input type="file" class="form-control" name="up_cat" id="up_cat" placeholder="Upload-Image">
+          <input type="file" required="required" class="form-control" name="up_cat" id="up_cat" placeholder="Upload-Image">
 
         </div>
         <div id="current_pic">

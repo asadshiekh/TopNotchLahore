@@ -23,7 +23,7 @@ use DB;
             "id"=>$info->id,
             "admin_name"=>$info->name,
             "admin_email"=>$info->email,
-            "status"=>'active'
+            "status"=>true
         );
 
         $request->session()->put($admindata);

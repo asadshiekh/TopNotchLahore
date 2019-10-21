@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin_Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\menu_validator;
+use Validator;
 use DB;
 
 class MainController extends Controller
@@ -98,7 +100,7 @@ class MainController extends Controller
           <div class="input-group-addon">
             <i class="fa fa-yelp"></i>
           </div>
-          <input type="text" placeholder="Enter Category Name" class="form-control" name="up_cat_name" id="up_cat_name" value="'.$cat_name.'" required onkeyup="checkname()">
+          <input type="text" placeholder="Enter Category Name" class="form-control" name="up_cat_name"  id="up_cat_name" value="'.$cat_name.'" required="required" onkeyup="checkname()">
         </div>
 
        
@@ -185,6 +187,8 @@ class MainController extends Controller
     }
 
     public function doAddMenuItem(Request $request){
+
+
         $current_date = date("Y.m.d h:i:s");
         $cat= $request->post('selected_cat');
         $name= $request->post('item_name');
@@ -209,6 +213,7 @@ class MainController extends Controller
          return redirect('view-menu-page')->with(['success' => 'Item Successfully Added in Your Menu']);
         }
 
+      
 
     }
 
@@ -230,7 +235,7 @@ class MainController extends Controller
                 <div class="input-group-addon">
                   <i class="fab fa-yelp"></i>
                 </div>
-                <select name="up_selected_cat" id="up_selected_cat" class="form-control">
+                <select name="up_selected_cat" required="required" id="up_selected_cat" class="form-control">
                   <option id="my-option" selected="selected" hidden value="'.$data->item_category.'">'.$data->item_category.'</option>';
                   foreach($cats as $cats){
                    $cat_name=str_replace("_"," ",$cats->cat_name);
@@ -248,7 +253,7 @@ class MainController extends Controller
                   <i class="fas fa-i-cursor"></i>
 
                 </div>
-                <input type="text" class="form-control" name="up_item_name" id="up_item_name" placeholder="Enter Name" value="'.$data->item_name.'">
+                <input type="text" class="form-control" required="required" name="up_item_name" id="up_item_name" placeholder="Enter Name" value="'.$data->item_name.'">
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -258,7 +263,7 @@ class MainController extends Controller
                   <i class="fas fa-dollar-sign"></i>
 
                 </div>
-                <input type="text" class="form-control" name="up_item_price" id="up_item_price" placeholder="Enter Price" value="'.$data->item_price.'">
+                <input type="text" class="form-control" required="required" name="up_item_price" id="up_item_price" placeholder="Enter Price" value="'.$data->item_price.'">
               </div>
             </div>
             <div class="form-group col-sm-12 col-md-6 col-md-offset-3">
@@ -268,7 +273,7 @@ class MainController extends Controller
                   <i class="fas fa-info"></i>
 
                 </div>
-                <textarea type="text" class="form-control" name="up_item_des" id="up_item_des" placeholder="Write Some Description" value="'.$data->item_des.'">'.$data->item_des.'</textarea>
+                <textarea type="text" class="form-control" required="required" name="up_item_des" id="up_item_des" placeholder="Write Some Description" value="'.$data->item_des.'">'.$data->item_des.'</textarea>
               </div>
             </div>';
 

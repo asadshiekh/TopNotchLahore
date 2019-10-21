@@ -50,7 +50,7 @@
                   <i class="fa fa-file-video-o"></i>
 
                 </div>
-                <input type="file" class="form-control" name="logo_img" id="logo_img" placeholder="Upload Image">
+                <input type="file" class="form-control" name="logo_img" id="logo_img" placeholder="Upload Image" required="required">
               </div>
             </div>
              <div class="form-group col-sm-12 col-md-2">

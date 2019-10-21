@@ -48,7 +48,7 @@
                   <div class="input-group-addon">
                     <i class="fas fa-i-cursor"></i>
                   </div>
-                  <input type="text" class="form-control" name="org_no" id="org_no" placeholder="Enter Number" value="{{$about->org_number}}">
+                  <input type="text" required="required" class="form-control" name="org_no" id="org_no" placeholder="Enter Number" value="{{$about->org_number}}">
                 </div>
               </div>
 
@@ -58,7 +58,7 @@
                   <div class="input-group-addon">
                     <i class="fas fa-i-cursor"></i>
                   </div>
-                  <input type="text" class="form-control" name="org_email" id="org_email" placeholder="Enter Email" value="{{$about->org_email}}">
+                  <input type="text" required="required" class="form-control" name="org_email" id="org_email" placeholder="Enter Email" value="{{$about->org_email}}">
                 </div>
               </div>
 
@@ -68,7 +68,7 @@
                   <div class="input-group-addon">
                     <i class="fas fa-i-cursor"></i>
                   </div>
-                  <textarea type="text" class="form-control" name="org_addr" id="org_addr" placeholder="Enter Address" value="{{$about->org_address}}">{{$about->org_address}}</textarea>
+                  <textarea type="text" class="form-control" name="org_addr" id="org_addr" placeholder="Enter Address" required="required" value="{{$about->org_address}}">{{$about->org_address}}</textarea>
                 </div>
               </div>
            

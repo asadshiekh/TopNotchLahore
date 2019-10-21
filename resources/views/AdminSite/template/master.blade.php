@@ -201,8 +201,6 @@
   <script src="{{url('public/admin_assets/vendors/fastclick/lib/fastclick.js')}}"></script>
   <!-- NProgress -->
   <script src="{{url('public/admin_assets/vendors/nprogress/nprogress.js')}}"></script>
-  <!-- Chart.js -->
-  <script src="{{url('public/admin_assets/vendors/Chart.js/dist/Chart.min.js')}}"></script>
   <!-- jQuery Sparklines -->
   <script src="{{url('public/admin_assets/vendors/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
   <script src="{{url('public/admin_assets/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js')}}"></script>
