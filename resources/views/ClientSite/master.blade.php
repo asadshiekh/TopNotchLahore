@@ -31,9 +31,9 @@
                         <!--navigation social links-->
                         <div class="nav-social">
                             <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/topnotchlahore/" target="_blank"><i class="fa fa-facebook"></i></a></li>
 <!--                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li> -->
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/topnotchlahore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="#" target="_blank"><i class="fa fa-youtube" style="width:15px"></i></a></li>
 <!--                                 <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
@@ -62,7 +62,7 @@
                                 </li>
                                 <li><a href="{{url('Reservation')}}">Reservation</a></li>
                                 <li><a href="{{url('Menu')}}">Menu</a></li>
-                                <li><a href="#">Kitchen Garden</a></li>
+                                <li><a href="{{url('kitchen-garden')}}">Kitchen Garden</a></li>
                                 <li><a href="{{url('about-us')}}">About</a></li>
                                 <li><a href="{{url('Contact-Us')}}">Contact</a></li>
                             </ul>
@@ -122,6 +122,7 @@
 <script type="text/javascript" src="{{url('public/Client_Assests/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/plugins.js')}}"></script>
 <script type="text/javascript" src="{{url('public/Client_Assests/js/scripts.js')}}"></script>
+ @include('AdminSite.alerts') 
 </body>
 <!-- Mirrored from lambert.kwst.net/site/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2019 21:26:31 GMT -->
 </html>

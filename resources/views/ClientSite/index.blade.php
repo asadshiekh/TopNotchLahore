@@ -31,7 +31,7 @@
                                     <div class="overlay"></div>
                                     <div class="bg" style="background-image: url({{url('public/Client_Assests/images/gallery/6.jpg')}})"></div>
                                     <div class="carousel-link-holder">
-                                        <h3><a href="#my-foot" class="custom-scroll-link">About Us</a></h3>
+                                        <h3><a href="{{url('about-us')}}" class="custom-scroll-link">About Us</a></h3>
                                         <!-- <h4>Take it confidently</h4> -->
                                     </div>
                                 </div>
@@ -74,9 +74,9 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="hero-link">
+<!--                     <div class="hero-link">
                         <a class="custom-scroll-link" href="#my-foot"><i class="fa fa-angle-double-down"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <!--hero end-->
     

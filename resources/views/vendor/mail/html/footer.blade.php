@@ -4,7 +4,7 @@
             <tr>
                 <td class="content-cell" align="center">
                     <!-- {{ Illuminate\Mail\Markdown::parse($slot) }} -->
-                    © 2019 http://www.khyberpassrestaurant.co.uk/. All Rights Reserved.
+                    © 2019 http://www.topnotchlahore.com/ All Rights Reserved.
              
                 </td>
             </tr>

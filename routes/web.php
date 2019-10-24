@@ -37,8 +37,13 @@ Route::get('Menu','Site_Controllers\MainController@viewMenu');
 // RESERVATION
 Route::get('Reservation','Site_Controllers\MainController@viewReservation');
 
+Route::any('do-reservation','Site_Controllers\MainController@doReservation');
+
 // About Us
 Route::get('about-us','Site_Controllers\MainController@viewAboutUs');
+
+// Contact Us
+Route::get('kitchen-garden','Site_Controllers\MainController@viewKitchenGarden');
 
 // Contact Us
 Route::get('Contact-Us','Site_Controllers\MainController@viewContactUs');

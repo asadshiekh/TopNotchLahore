@@ -34,7 +34,7 @@
 	++++Media ++++
 */
 /*-------------Import fonts ---------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Cabin:400,700|Droid+Serif:400,700|Playball);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Cabin:400,700|Droid+Serif:400,700|Playball);
 /*-------------General Style---------------------------------------*/
 html{
 	overflow-x:hidden !important;
@@ -730,6 +730,7 @@ header.sticky nav a , header.sticky .subnav a  , header.flat-header .nav-social 
 	height:100%;
 	background:#fff;
 	z-index:20;
+	display: none;
 }
 .hero-content:after {
 	content:'';
@@ -740,6 +741,7 @@ header.sticky nav a , header.sticky .subnav a  , header.flat-header .nav-social 
 	height:100%;
 	background:#fff;
 	z-index:20;
+	display: none;
 }
 .hero-link a:before {
 	content:'';
@@ -1889,6 +1891,7 @@ footer:before {
 	height:80px;
 	border-radius:100%;
 	background:#191919;
+	display: none;
 }
 footer:after {
 	content:'';
@@ -1898,7 +1901,8 @@ footer:after {
 	margin-left:-5px;
 	width:10px;
 	height:10px;
-	border-radius:100%;9;
+	border-radius:100%;
+	display: none;
 }
 .footer-inner {
 	float:left;

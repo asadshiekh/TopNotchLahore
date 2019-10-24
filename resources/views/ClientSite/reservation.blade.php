@@ -7,7 +7,7 @@
             <div class="bg bg-parallax" style="background-image:url({{url('public/Client_Assests/images/bg/08.jpg')}}" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
             <div class="overlay"></div>
             <div class="container">
-                <h2>Make online reservation</h2>
+                <h2>Make online Reservation</h2>
                 <h3>Booking a table online is easy</h3>
             </div>
         </section>
@@ -35,18 +35,18 @@
                         <div class="reservation-form-holder">
                             <div class="reservation-form">
                                 <div id="message"></div>
-                                <form action="#" name="reservationform" id="reservation-form">
+                                <form method="post" action="{{url('do-reservation')}}" name="reservationform" id="reservation-form">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-1"></div>
                                         <div class="col-12 col-md-5">
                                             <h3 class="colr-gold">Contact Details</h3>
                                             <!--name-->
-                                            <input name="name" type="text" id="name"  placeholder="Enter Name Here">
+                                            <input name="rev_name" type="text" id="name"  placeholder="Enter Name Here" required="required">
                                             <!--mail-->
-                                            <input name="email" type="text" id="email" placeholder="E-mail" >
+                                            <input name="rev_email" type="email" id="email" placeholder="E-mail" required="required">
                                             <!--phone-->
-                                            <input name="phone" type="text" id="phone" placeholder="Phone">
+                                            <input name="rev_phone" type="number" id="phone" placeholder="Phone" required="required">
                                             <!--message-->
                                           <!--   <textarea name="comments"  id="comments" onClick="this.select()" >Message</textarea> -->
                                         </div>
@@ -54,10 +54,10 @@
                                         <div class="col-12 col-md-5">
                                             <h3 class="colr-gold">Book a table</h3>
                                             <!--date-->
-                                            <input  type="date" name="date" value="Date" >
+                                            <input  type="date" name="date" id="Mydate" value="Date"  required="required">
                                             <!--time-->
-                                            <select id="restime" name="restime" class="form-control">
-                                                
+                                            <select id="restime" name="restime" required="required" class="form-control">
+                                                <option value="" hidden>Select Time</option>
                                                 <option value="5:00pm">5:00 pm</option>
                                                 <option value="5:30pm">5:30 pm</option>
                                                 <option value="6:00pm">6:00 pm</option>
@@ -83,7 +83,8 @@
                                                 <option value="Lambert - Florida ">Lambert - Florida</option>
                                             </select> -->
                                             <!--person-->
-                                            <select id="resperson" class="form-control" name="resperson" onchange="input_view(this.value);">
+                                            <select required id="resperson" required class="form-control" name="res_person" onchange="input_view(this.value);">
+                                                <option value="" hidden>Select Person</option>
                                                 <option value="1">1 Person</option>
                                                 <option value="2">2 People</option>
                                                 <option value="3">3 People</option>
@@ -95,7 +96,7 @@
                                         </div>
                                         
                                     </div>
-                                    <button type="button" id="submit-res">Make a reservation</button>
+                                    <button type="submit" id="submit-res">Make a reservation</button>
                                 </form>
                             </div>
                         </div>
@@ -110,11 +111,14 @@
         function input_view(x) {
 
         if(x=="other"){
-            $(".new_field").html('<input name="text" name="other_seats" id="other_seats" placeholder="Enter Number of persons" style="color: #bda86c;">');
+            $(".new_field").html('<input type="text" required  name="res_person1" id="other_seats" placeholder="Enter Number of persons" style="color: #bda86c;">');
             }else{
             $(".new_field").html('');
             }
         }
+
+        document.getElementById("Mydate").min = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate()
+
         
     </script>
      @endsection
