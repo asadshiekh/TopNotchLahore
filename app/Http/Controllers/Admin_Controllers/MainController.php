@@ -332,6 +332,12 @@ class MainController extends Controller
         }
     }
 
+    public function viewReservation(Request $request){
+     $title="TopNotch - Reservations";
+        $res_order=DB::table('reservation_order')->orderBy('res_id','desc')->get();
+        return view('AdminSite/view_reservation',['page_title'=>$title,'res_order'=>$res_order]);
+    }
+
 
 
 }

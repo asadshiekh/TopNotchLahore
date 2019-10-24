@@ -106,6 +106,7 @@ Route::any('update-item-menu','Admin_Controllers\MainController@doUpdateMenuItem
 // Route::any('do-reserve','Site_Controllers\MainController@doReserveSeat');
 // reservation end
 
+Route::any('show-reservations','Admin_Controllers\MainController@viewReservation');
 // about us routes start
 
 Route::any('view-about-us','Admin_Controllers\MainController@viewAboutUsPage')->middleware('Authentications');

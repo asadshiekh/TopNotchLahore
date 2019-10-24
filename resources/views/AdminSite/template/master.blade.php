@@ -84,6 +84,7 @@
                     <li><a href="{{url('add-menu-category')}}">Menu Categories</a></li>
                     <li><a href="{{url('view-menu-page')}}">Manage Menu</a></li>
                     <li><a href="{{url('view-about-us')}}">Manage About Us</a></li>
+                    <li><a href="{{url('show-reservations')}}">Reservations</a></li>
                   
                   </ul>
                 </li>
