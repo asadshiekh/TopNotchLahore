@@ -2,16 +2,16 @@ APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:gQetBxQLNaK38+HfBlj3NJJIvPb+2TJXuHqiwaZkxNA=
 APP_DEBUG=true
-APP_URL=http://localhost
+APP_URL=http://www.topnotchlahore.com
 
 LOG_CHANNEL=stack
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=TopNotch
-DB_USERNAME=root
-DB_PASSWORD=
+DB_DATABASE=topnot50_topnotch
+DB_USERNAME=topnot50_root
+DB_PASSWORD=Chess1234
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
@@ -26,8 +26,8 @@ REDIS_PORT=6379
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USERNAME=
-MAIL_PASSWORD=
+MAIL_USERNAME=topnotchlahore@gmail.com
+MAIL_PASSWORD=hgmkdxhswgmjigpq
 MAIL_ENCRYPTION=tls
 
 PUSHER_APP_ID=

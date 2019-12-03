@@ -29,7 +29,7 @@
                              <div class="item full-height">
                                 <div class="carousel-item">
                                     <div class="overlay"></div>
-                                    <div class="bg" style="background-image: url({{url('public/Client_Assests/images/gallery/6.jpg')}})"></div>
+                                    <div class="bg" style="width: 100%;background-image: url({{url('public/Client_Assests/images/topnotch_offical/topnotch_outdoor4.jpeg')}})"></div>
                                     <div class="carousel-link-holder">
                                         <h3><a href="{{url('about-us')}}" class="custom-scroll-link">About Us</a></h3>
                                         <!-- <h4>Take it confidently</h4> -->

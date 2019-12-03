@@ -30,7 +30,7 @@
                             <h4 class="decor-title">Take A Tour Of Kitchen Garden </h4>
                             <div class="separator color-separator"></div>
                         </div>
-                        <p>Description.</p>
+                        <p style="text-align: center;">First Ever Organic Inspired Restaurant Of Pakitsan with Its Kitchen Garden On Site.</p>
                         
                         
                    
@@ -45,14 +45,52 @@
                                 <a class="prev-slide transition"><i class="fa fa-angle-left"></i></a>
                             </div>
                             <div class="single-slider owl-carousel">
-                                <!-- 1 -->
+                                <!-- 2 -->
                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/gallery/1.jpg')}}" class="respimg" alt="">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen1.jpeg')}}" class="respimg" alt="vegetables organic">
                                 </div>
                                 <!-- 2 -->
                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/gallery/5.jpg')}}" class="respimg" alt="">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen2.jpeg')}}" class="respimg" alt="fresh tomates vegetables organic ">
                                 </div>
+                                <!-- 3 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen3.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 4 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen4.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                 <!-- 5 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen5.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 6 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen6.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 7 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen7.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 8 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen8.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 9 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen9.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 10 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen10.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+                                <!-- 11 -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/kitchen_garden/kitchen11.jpeg')}}" class="respimg" alt="fresh food vegetables organic">
+                                </div>
+
+
 
                             </div>
                         </div>

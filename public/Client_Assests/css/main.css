@@ -202,12 +202,17 @@
 
 }
 /*menu items */
- .menu-item-details a, .menu-item-details,.menu-item p,.parallax-section h2,.colr-gold,.inner{
-   background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+ .menu-item-details a,.sub-category-drinks, .menu-item-details,.menu-item p,.parallax-section h2,.colr-gold,.inner{
+   background: linear-gradient(30deg,#b6712b 0%,#F2EA91 50%,#b6712b 100%) !important; 
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 
 }
+
+.sub-category-drinks{
+  font-size: 22px !important
+}
+
 .menu-item-dot {
     border-bottom: 1px dotted #F2EA91;
 }

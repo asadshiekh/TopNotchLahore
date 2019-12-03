@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
     
-    <!-- Mirrored from lambert.kwst.net/site/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2019 21:26:29 GMT -->
     <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
         <title>{{ $page_title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
+        <meta name="keywords" content="{{ $meta_keyword }}"/>
+        <meta name="description" content="{{ $meta_descri }}"/>
 
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/reset.css')}}">
@@ -19,6 +18,17 @@
         <link type="text/css" rel="stylesheet" href="{{url('public/Client_Assests/css/main.css')}}">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="http://www.demo.topnotchlahore.com/public/Client_Assests/images/favicon.ico">
+
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151005827-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-151005827-1');
+        </script>
+
     </head>
     <body>
         <div class="loader"><img src="{{url('public/Client_Assests/images/top-notch-logo.png')}}" alt=""></div>
@@ -73,7 +83,7 @@
         </header>
         <!--header end-->
 
-        @yield('content');
+        @yield('content')
         
         <!--content end-->
         <!--=============== footer ===============-->
@@ -124,5 +134,5 @@
 <script type="text/javascript" src="{{url('public/Client_Assests/js/scripts.js')}}"></script>
  @include('AdminSite.alerts') 
 </body>
-<!-- Mirrored from lambert.kwst.net/site/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2019 21:26:31 GMT -->
+
 </html>

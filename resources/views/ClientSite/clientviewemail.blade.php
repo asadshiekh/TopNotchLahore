@@ -11,5 +11,5 @@ Click Here To Go Back to Website
 
 @endcomponent
 
-Thanks for Resveration,
-Top Notch Management
+Thank You for Your Resveration, Our Top Notch Management will contact you soon. Have a Great Day
+

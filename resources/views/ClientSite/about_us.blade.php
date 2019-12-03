@@ -49,16 +49,16 @@
                             <div class="single-slider owl-carousel">
                                 <!-- 1 -->
                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/13.jpg')}}" class="respimg" alt="">
+                                    <img src="{{url('public/Client_Assests/images/topnotch_offical/topnotch_outdoor1.jpeg')}}" class="respimg" alt="">
                                 </div>
                                 <!-- 2 -->
                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/14.jpg')}}" class="respimg" alt="">
+                                    <img src="{{url('public/Client_Assests/images/topnotch_offical/topnotch_outdoor2.jpeg')}}" class="respimg" alt="">
                                 </div>
                                 <!-- 3 -->
-<!--                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/15.jpg')}}" class="respimg" alt="">
-                                </div> -->
+                                <div class="item">
+                                    <img src="{{url('public/Client_Assests/images/topnotch_offical/topnotch_outdoor4.jpeg')}}" class="respimg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,16 +144,8 @@
                             <div class="single-slider owl-carousel">
                                 <!-- 1 -->
                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/13.jpg')}}" class="respimg" alt="">
+                                    <img src="{{url('public/Client_Assests/images/topnotch_offical/topnotch_outdoor.jpeg')}}" class="respimg" alt="">
                                 </div>
-                                <!-- 2 -->
-<!--                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/14.jpg')}}" class="respimg" alt="">
-                                </div> -->
-                                <!-- 3 -->
-<!--                                 <div class="item">
-                                    <img src="{{url('public/Client_Assests/images/bg/15.jpg')}}" class="respimg" alt="">
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -269,7 +261,7 @@
         </section>
         <!--section end-->
         <!--=============== testimonials ===============-->
-        <section class="parallax-section">
+<!--         <section class="parallax-section">
             <div class="bg bg-parallax" style="background-image:url({{url('public/Client_Assests/images/bg/1.jpg')}})" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
             <div class="overlay"></div>
             <div class="container">
@@ -325,7 +317,7 @@
                 </div>
                 <div class="section-icon"><i class="fa fa-quote-left"></i></div>
             </div>
-        </section>
+        </section> -->
         <!--section end-->
     </div>
     @endsection
